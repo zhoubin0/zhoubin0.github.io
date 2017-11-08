@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>javascript 函数 对象 定时器 | coco阿斌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ZhouBin,ZhouBin's Blog" />
+  
+  <meta name="description" content="JS函数,对象/类,定时器JS函数 JavaScript函数定义：  不带参数的函数  1234function functionname()&amp;#123;//这里是要执行的代码&amp;#125;   &amp;gt; 带参数的函数function myFunction(var1,var2){//这里是要执行的代码}&amp;gt; 调用不带参数的函数myFunction()&amp;gt; 调用带参数的函数myFunction">
+<meta name="keywords" content="JavaScript,前端基础,动态网页编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript 函数 对象 定时器">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/JS 对象 类,定时器/index.html">
+<meta property="og:site_name" content="coco阿斌">
+<meta property="og:description" content="JS函数,对象/类,定时器JS函数 JavaScript函数定义：  不带参数的函数  1234function functionname()&amp;#123;//这里是要执行的代码&amp;#125;   &amp;gt; 带参数的函数function myFunction(var1,var2){//这里是要执行的代码}&amp;gt; 调用不带参数的函数myFunction()&amp;gt; 调用带参数的函数myFunction">
+<meta property="og:updated_time" content="2017-10-26T09:37:53.154Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript 函数 对象 定时器">
+<meta name="twitter:description" content="JS函数,对象/类,定时器JS函数 JavaScript函数定义：  不带参数的函数  1234function functionname()&amp;#123;//这里是要执行的代码&amp;#125;   &amp;gt; 带参数的函数function myFunction(var1,var2){//这里是要执行的代码}&amp;gt; 调用不带参数的函数myFunction()&amp;gt; 调用带参数的函数myFunction">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+
+
+    <iframe   style="display: none;" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=448144044&auto=1&height=66"></iframe>
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">ZhouBin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归类</span>
+                    </a>
+                    
+                    <a  href="/404.html">
+                        <i class="fa fa-user"></i>
+                        <span>公益</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/img/logozw.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        ZhouBin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        路的尽头，仍然有路，只要你愿意走
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//zhoubin0.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/zhoubin0">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/5544518235">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//user.qzone.qq.com/316717682/">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-JS 对象 类,定时器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      javascript 函数 对象 定时器
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/学习/">学习</a>
+                  
+                      <a href="/categories/动态网页编程/">动态网页编程</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-04-10
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="JS函数-对象-类-定时器"><a href="#JS函数-对象-类-定时器" class="headerlink" title="JS函数,对象/类,定时器"></a><strong>JS函数,对象/类,定时器</strong></h1><h2 id="JS函数"><a href="#JS函数" class="headerlink" title="JS函数"></a><strong>JS函数</strong></h2><ul>
+<li><p><strong>JavaScript函数定义：</strong></p>
+<blockquote>
+<p><strong>不带参数的函数</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function functionname()</div><div class="line">&#123;</div><div class="line">//这里是要执行的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong><code>&gt; 带参数的函数function myFunction(var1,var2){//这里是要执行的代码}&gt; 调用不带参数的函数</code>myFunction()<code>&gt; 调用带参数的函数</code>myFunction(argument1,argument2)`</strong>在调用函数时，您可以向其传递值，这些值被称为参数。您可以发送任意多的参数，由逗号 (,) 分隔<strong>`</strong></p>
+<ul>
+<li><p><strong>带有返回值的函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function myFunction()</div><div class="line">&#123;</div><div class="line">var x=5;</div><div class="line">return x;</div><div class="line">&#125;</div><div class="line">var myVar=myFunction();</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>myVar 变量的值是 5也就是上面的函数返回值5</strong></p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p><strong>匿名函数(匿名函数就是没有实际名字的函数)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//匿名函数</div><div class="line">(function() &#123;</div><div class="line">alert(&apos;water&apos;);</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>匿名函数的调用</strong></p>
+<blockquote>
+<p><strong>要调用一个函数，我们必须要有方法定位它，引用它。所以，我们会需要帮它找一个名字。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt; var abc=function(x,y)&#123;</div><div class="line">&gt; return x+y;</div><div class="line">&gt; &#125;</div><div class="line">&gt; alert(abc(2,3));</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="JS对象-类"><a href="#JS对象-类" class="headerlink" title="JS对象/类"></a><strong>JS对象/类</strong></h2><ul>
+<li><p><strong>对象:</strong></p>
+<ul>
+<li><p><strong>面向对象编程的核心</strong></p>
+</li>
+<li><p><strong>表示现实世界中的实体</strong></p>
+</li>
+<li><p><strong>为计算机应用程序提供实用基础</strong></p>
+</li>
+<li><p><strong>完成特定任务</strong></p>
+<blockquote>
+<p><strong>对象是存在的具体实体，具有明确定义的状态和行为。</strong><br><strong>对象：用来描述客观事物的一个实体，由一组属性和方法构成</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>类</strong></p>
+<blockquote>
+<p><strong>具有相同属性和方法的一组对象的集合类是对象的类型</strong><br><strong>类是模子，确定对象将会拥有的特征（属性）和行为（方法）</strong></p>
+</blockquote>
+<ul>
+<li><p><strong>类的创建</strong></p>
+</li>
+<li><p>​</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function class1()&#123;</div><div class="line">//类成员的定义及构造函数</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>创建一个学生类</strong></p>
+</li>
+<li><p><strong>每个学生都有年龄、姓名、班级和爱好。用类的思想编写学生类</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Students (name,age,grade,hobby)&#123;</div><div class="line">this.name=name; //姓名</div><div class="line">this. age=age; //年龄</div><div class="line">this. grade=grade; //班级</div><div class="line">this. Hobby=hobby; //爱好</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>为Students引用类型创建几个属性getName和setName方法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Students.prototype.getName=function()&#123;</div><div class="line">return this.name;</div><div class="line">&#125;</div><div class="line">Students.prototype.setName=function(name)&#123;</div><div class="line">this.name=name;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>创建和使用引用类型的实例</strong></p>
+<blockquote>
+<p><strong>创建对象语法：var 对象名 = new 类名();</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// 使用对象示例：</div><div class="line">var Student01=new Students(&quot;张三&quot;,&quot;20&quot;,&quot;2&quot;,&quot;唱歌&quot;);</div><div class="line">var Student02=new Students(&quot;李四&quot;,&quot;30&quot;,&quot;3&quot;,&quot;跳舞&quot;)</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>引用对象成员：使用“ .” 进行以下操作 类的创建不引用</strong></p>
+<blockquote>
+<p><strong>属性：对象名.属性</strong><br><strong>方法：对象名.方法名()</strong></p>
+</blockquote>
+</li>
+<li><p><strong>调用getName ()方法及age属性等，并将结果输出到页面上：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.write(&quot;我叫：&quot;+Student01.getName()+&quot;年龄:&quot;+Student01.age+&quot;,所在班级：&quot;+Student01.getGrade()+&quot;，我的爱好是：&quot;+Student01.getHobby()+&quot;。 &quot;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="JS定时器"><a href="#JS定时器" class="headerlink" title="JS定时器"></a><strong>JS定时器</strong></h2><blockquote>
+<p><strong>JavaScript中有两类计时器，即一次性计时器和定期</strong><br><strong>触发计时器。</strong></p>
+<p><strong>一次性计时器仅在指定的时间后触发一次(<code>setTimeout()</code>)</strong><br><strong>定期触发计时器是每隔一定时间就触发一次(<code>setInterval()</code>)</strong></p>
+</blockquote>
+<ul>
+<li><p><strong>一次性计时器：</strong></p>
+<ul>
+<li><p><strong>使用window对象的setTimeout()方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Window.setTimeout(“function()&#123;&#125;”,delay)</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>setTimeout()方法接收两参数，第一个是要执行的JavaScript代码，可以是一个函数，也可以是几个函数，函数间用“；”隔开即可。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//页面加载3秒后触发的计时器</div><div class="line">function hello()&#123;</div><div class="line">alert(&quot;hello&quot;);</div><div class="line">&#125;</div><div class="line">window.setTimeout(hello,3000);</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>清除定时器</strong></p>
+<ul>
+<li><strong><code>clearTimeout(定时器id)</code></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>定期触发计时器</strong></p>
+<blockquote>
+<p><strong>setInterval()方法的参数不setTimeout()方法相同，但第二</strong><br><strong>个参数丌是计时器触发前的时间，而是计时器的触发间隔，</strong><br><strong>该间隔以毫秒为单位。</strong><br><strong><code>Var myTimerID=setInterval(“ myFunction(){}”,5000);</code></strong></p>
+</blockquote>
+<ul>
+<li><strong>清除定时器</strong><br><strong><code>window.clearInterval(timer2)</code></strong></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>两者的区别在: 一个只执行一次,另一个没过一段时间就 执行一次;</strong></p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h2><ul>
+<li><p><strong>函数</strong></p>
+<blockquote>
+<p><strong>不带参数的函数,带参数的函数,匿名函数,函数返回值</strong></p>
+</blockquote>
+</li>
+<li><p><strong>对象, 类</strong></p>
+<blockquote>
+<p><strong>概念,创建,使用</strong></p>
+</blockquote>
+</li>
+<li><p><strong>定时器</strong></p>
+<blockquote>
+<p><strong>概念,创建,使用<code>setTimeout(), clearTimeout(),setInterval(),clearIearval()</code></strong></p>
+</blockquote>
+</li>
+</ul>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年10月26日 17:37</p>
+        <p>原始链接： <a class="post-url" href="/2017/04/10/JS 对象 类,定时器/" title="javascript 函数 对象 定时器">http://yoursite.com/2017/04/10/JS 对象 类,定时器/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/img/logozw.jpg" alt="周斌">
+                周斌
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/10/JS 对象 类,定时器/&title=《javascript 函数 对象 定时器》 — coco阿斌&pic=http://yoursite.comimg/logozw.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/10/JS 对象 类,定时器/&title=《javascript 函数 对象 定时器》 — coco阿斌&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/10/JS 对象 类,定时器/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javascript 函数 对象 定时器》 — coco阿斌&url=http://yoursite.com/2017/04/10/JS 对象 类,定时器/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/10/JS 对象 类,定时器/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/10/JS 对象 类,定时器/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/前端基础/" class="color5">前端基础</a>
+      
+    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JS函数-对象-类-定时器"><span class="post-toc-text">JS函数,对象/类,定时器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JS函数"><span class="post-toc-text">JS函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JS对象-类"><span class="post-toc-text">JS对象/类</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JS定时器"><span class="post-toc-text">JS定时器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-text">总结</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/04/10/Math 对象/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          javascript Math 对象
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/04/10/数组方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">javascript 数组方法</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="JS 对象 类,定时器" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cythQ8OuD';
+        var conf = '11d33834dab0216e0550f122951c3687';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 周斌<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/学习/">学习</a><a class="category-link" href="/categories/学习/动态网页编程/">动态网页编程</a><a class="category-link" href="/categories/学习/励志故事/">励志故事</a><a class="category-link" href="/categories/学习/情感/">情感</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归类</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/404.html">
+                    <i class="fa fa-user"></i><span>公益</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>

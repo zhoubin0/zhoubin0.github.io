@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>javascript基本对象,数据类型,常量,变量 | coco阿斌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ZhouBin,ZhouBin's Blog" />
+  
+  <meta name="description" content="javascript基本对象,数据类型,常量,变量javascript数据类型 基本数据类型 Number String Boolean Null Undefined   混合数据类型 Object   js中变量是松散类型的，因此有时我们需要检测变量的数据类型 typeof操作符可以检测变量的数据类型（输出的是一个关于数据类型的字符串）  数字(Number) 介绍Number类型包含整数和浮">
+<meta name="keywords" content="JavaScript,前端基础,动态网页编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript基本对象,数据类型,常量,变量">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/07 01  javascript/index.html">
+<meta property="og:site_name" content="coco阿斌">
+<meta property="og:description" content="javascript基本对象,数据类型,常量,变量javascript数据类型 基本数据类型 Number String Boolean Null Undefined   混合数据类型 Object   js中变量是松散类型的，因此有时我们需要检测变量的数据类型 typeof操作符可以检测变量的数据类型（输出的是一个关于数据类型的字符串）  数字(Number) 介绍Number类型包含整数和浮">
+<meta property="og:updated_time" content="2017-10-19T11:08:56.837Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript基本对象,数据类型,常量,变量">
+<meta name="twitter:description" content="javascript基本对象,数据类型,常量,变量javascript数据类型 基本数据类型 Number String Boolean Null Undefined   混合数据类型 Object   js中变量是松散类型的，因此有时我们需要检测变量的数据类型 typeof操作符可以检测变量的数据类型（输出的是一个关于数据类型的字符串）  数字(Number) 介绍Number类型包含整数和浮">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+
+
+    <iframe   style="display: none;" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=448144044&auto=1&height=66"></iframe>
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">ZhouBin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归类</span>
+                    </a>
+                    
+                    <a  href="/404.html">
+                        <i class="fa fa-user"></i>
+                        <span>公益</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/img/logozw.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        ZhouBin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        路的尽头，仍然有路，只要你愿意走
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//zhoubin0.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/zhoubin0">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/5544518235">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//user.qzone.qq.com/316717682/">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-07 01  javascript" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      javascript基本对象,数据类型,常量,变量
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/学习/">学习</a>
+                  
+                      <a href="/categories/动态网页编程/">动态网页编程</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-04-10
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><strong><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33162226&auto=1&height=66"></iframe></strong></p>
+<h1 id="javascript基本对象-数据类型-常量-变量"><a href="#javascript基本对象-数据类型-常量-变量" class="headerlink" title="javascript基本对象,数据类型,常量,变量"></a><strong>javascript基本对象,数据类型,常量,变量</strong></h1><h2 id="javascript数据类型"><a href="#javascript数据类型" class="headerlink" title="javascript数据类型"></a><strong>javascript数据类型</strong></h2><ul>
+<li><strong>基本数据类型</strong><ol>
+<li><strong>Number</strong></li>
+<li><strong>String</strong></li>
+<li><strong>Boolean</strong></li>
+<li><strong>Null</strong></li>
+<li><strong>Undefined</strong></li>
+</ol>
+</li>
+<li><strong>混合数据类型</strong><ul>
+<li><strong>Object</strong></li>
+</ul>
+</li>
+<li><strong>js中变量是松散类型的，因此有时我们需要检测变量的数据类型</strong></li>
+<li><strong>typeof操作符可以检测变量的数据类型（输出的是一个关于数据类型的字符串）</strong></li>
+</ul>
+<h3 id="数字-Number"><a href="#数字-Number" class="headerlink" title="数字(Number)"></a><strong>数字(Number)</strong></h3><ul>
+<li><p><strong>介绍Number类型包含整数和浮点数（浮点数数值必须包含一个小数点，且小数点后面至少有一位数字）两种值</strong></p>
+<blockquote>
+<p>例如:<code>var x1=34.00</code>; //使用小数点来写<br><strong><code>var x2=34</code>; //不使用小数点来写</strong></p>
+</blockquote>
+</li>
+<li><p><strong>极大或极小的数字可以通过科学（指数）计数法来书写：</strong></p>
+<blockquote>
+<p>例：<code>var y=123e5; // 12300000</code><br><strong><code>var z=123e-5; // 0.00123</code></strong></p>
+</blockquote>
+</li>
+<li><p><strong>NaN:非数字类型</strong></p>
+<ul>
+<li><strong>特点：涉及到的 任何关于NaN的操作，都会返回NaN</strong></li>
+<li><strong>NaN不等于自身。</strong><blockquote>
+<p>例：<code>var ab = &quot;a1&quot;;</code><br><code>console.log(ab/10);// NaN</code><br><strong><code>console.log(NaN == NaN);// false;</code></strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>###<strong>字符串（string）</strong></p>
+<blockquote>
+<p>例：<code>var carname=&quot;Bill Gates&quot;;</code><br><strong><code>var answer=&quot;He is called &#39;Johnny&#39;&quot;;</code></strong></p>
+</blockquote>
+<ul>
+<li><strong>字符串是存储字符（比如 “Bill Gates”）的变量。</strong></li>
+<li><strong>字符串可以是引号中的任意文本，可以使用单引号或双引号，只要不匹配包围字符串的引号即可</strong></li>
+<li><strong>注： JavaScript对大小写敏感</strong></li>
+</ul>
+<p>###<strong>布尔（boolean）</strong></p>
+<blockquote>
+<p><strong>例：<code>var x=true</code></strong><br><strong><code>var y=false</code></strong></p>
+<ul>
+<li><strong>布尔（逻辑）只能有两个值：<code>true</code> 或 <code>false</code>。</strong></li>
+</ul>
+</blockquote>
+<h3 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a><strong>Undefined</strong></h3><ul>
+<li><strong>Undefined 这个值表示变量不含有值。</strong></li>
+<li><strong>可以通过将变量的值设置为 null 来清空变量</strong></li>
+</ul>
+<h3 id="null"><a href="#null" class="headerlink" title="null"></a><strong>null</strong></h3><ul>
+<li><strong>null类型被看做空对象指针，null类型也是空的对象引用。</strong><br><strong>只有一个值，即null值，所以，在用typeof 操作符去检测</strong><br><strong>null类型的值时，结果是object类型。</strong><br><strong>如果你定义了一个变量，但是想在以后把这个变量当做一</strong><br><strong>个对象来用，那么最好将该对象初始化为null值</strong></li>
+</ul>
+<p>###<strong>对象（object）</strong></p>
+<ul>
+<li><p><strong>对象由花括号分隔。在括号内部，对象的属性以名称和</strong><br><strong>值对的形式 (name : value) 来定义。属性由逗号分隔：</strong></p>
+<blockquote>
+<p>例：var person={<br>firstname : “Bill”,<br>lastname : “Gates“<br><strong>};</strong></p>
+</blockquote>
+</li>
+<li><p><strong>数组为混合数据类型中的一种</strong></p>
+</li>
+</ul>
+<h2 id="常量Constant：不变的值"><a href="#常量Constant：不变的值" class="headerlink" title="常量Constant：不变的值"></a><strong>常量Constant：不变的值</strong></h2><ul>
+<li><p><strong><code>const constantName = value1；</code></strong></p>
+<blockquote>
+<p><strong>常量名首字符为字母或下划线，其后可有数字。 value1为直接量或表达式。</strong></p>
+</blockquote>
+</li>
+<li><p><strong>1个const关键字可定义1个或多个常量。</strong></p>
+</li>
+<li><strong>内置常量：JS中Infinity表无穷大的数值，-indinity表无穷小.NaN表非数值。</strong><blockquote>
+<p>例：const a = 10;<br> alert(a)</p>
+</blockquote>
+</li>
+</ul>
+<p>##<strong>变量</strong></p>
+<ul>
+<li><strong>概念:变量是存取数字、提供存放信息的容器。对于变量，必须明确变量的命名、变量的类型、变量的声明及其变量的作用域。命名规范</strong></li>
+<li><p><strong>变量命名规范:</strong></p>
+<ul>
+<li><strong>变量必须以字母或下划线开头，后可以跟字母、数字、下划线，不能有空格或特殊字符等。</strong></li>
+<li><strong>不用使用Javascript中的关键字作为变量，如var,true,double等。</strong></li>
+<li><strong>在对变量命名时，最好把变量的意义与其代表的意思对应起来，以免发现错误。</strong></li>
+</ul>
+</li>
+<li><p><strong>变量的类型：</strong></p>
+<ul>
+<li><strong>整数变量：x=100;</strong></li>
+<li><strong>字符串变量：y=“125”</strong></li>
+<li><strong>布尔型变量：xy=True</strong></li>
+<li><strong>实型变量：cost=19.5</strong></li>
+</ul>
+</li>
+<li><p><strong>变量的声明</strong></p>
+<ul>
+<li><strong>JavaScript可以在使用前先声明，并可赋值。变量声明用可用命令<code>var</code>;</strong><blockquote>
+<p>例：<code>var mytest;</code><br>该例子定义了一个mytest变量，但没有赋予其值<br><strong>例：var mytest=“This is a book”</strong><br><strong>该例子定义了变量并为其赋予了值。</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>变量的作用域：</strong></p>
+<ul>
+<li><strong>变量分为全局变量和局部变量。</strong><ul>
+<li><strong>全局变量是定义在所有函数体之外，其作用范围是整个函数</strong></li>
+</ul>
+</li>
+<li><strong>局部变量是定义在函数体之内，只对其该函数是可见的，而对其它函数则是不可见的。</strong></li>
+<li><strong>函数体内可以访问父级函数的变量，父级函数不能访问子函数的变量。</strong><br><strong>注：在声明变量时凡是没有var关键字，而直接赋值的变量均为全局变量</strong></li>
+</ul>
+</li>
+</ul>
+<p>##　<strong>JavaScript 的基本对象</strong></p>
+<blockquote>
+<p><strong>对象包括：系统标准类对象 和 自定义对象</strong></p>
+</blockquote>
+<ul>
+<li><strong>标准类对象:</strong><ul>
+<li><strong>字符串对象String、</strong></li>
+<li><strong>日期对象Date、</strong></li>
+<li><strong>数组对象Array、</strong></li>
+<li><strong>数字对象Number 、</strong></li>
+<li><strong>数学对象Math、</strong></li>
+<li><strong>正则表达式对象RegExp</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>*自定义类对象:自定义的包含属性和方法的对象</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">例：<span class="keyword">var</span> person=&#123;</div><div class="line">firstname : <span class="string">"Bill"</span>,</div><div class="line">lastname : <span class="string">"Gates"</span>,</div><div class="line">eat : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年10月19日 19:08</p>
+        <p>原始链接： <a class="post-url" href="/2017/04/10/07 01  javascript/" title="javascript基本对象,数据类型,常量,变量">http://yoursite.com/2017/04/10/07 01  javascript/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/img/logozw.jpg" alt="周斌">
+                周斌
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/10/07 01  javascript/&title=《javascript基本对象,数据类型,常量,变量》 — coco阿斌&pic=http://yoursite.comimg/logozw.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/10/07 01  javascript/&title=《javascript基本对象,数据类型,常量,变量》 — coco阿斌&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/10/07 01  javascript/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javascript基本对象,数据类型,常量,变量》 — coco阿斌&url=http://yoursite.com/2017/04/10/07 01  javascript/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/10/07 01  javascript/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/10/07 01  javascript/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/前端基础/" class="color5">前端基础</a>
+      
+    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#javascript基本对象-数据类型-常量-变量"><span class="post-toc-text">javascript基本对象,数据类型,常量,变量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#javascript数据类型"><span class="post-toc-text">javascript数据类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数字-Number"><span class="post-toc-text">数字(Number)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Undefined"><span class="post-toc-text">Undefined</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#null"><span class="post-toc-text">null</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常量Constant：不变的值"><span class="post-toc-text">常量Constant：不变的值</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/04/10/BOM 对象/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          javascript Bom 对象
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/04/10/jQuery 中的遍历/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">JQuery中的遍历</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="07 01  javascript" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cythQ8OuD';
+        var conf = '11d33834dab0216e0550f122951c3687';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 周斌<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/学习/">学习</a><a class="category-link" href="/categories/学习/动态网页编程/">动态网页编程</a><a class="category-link" href="/categories/学习/励志故事/">励志故事</a><a class="category-link" href="/categories/学习/情感/">情感</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归类</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/404.html">
+                    <i class="fa fa-user"></i><span>公益</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>javascript 字符串操作 | coco阿斌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ZhouBin,ZhouBin's Blog" />
+  
+  <meta name="description" content="JS字符串操作 “字符串对象”是Javascript内置的字符块处理对象，用于定义及处理字符串。   声明字符串的两种方法:  var str1 = &amp;quot;string1&amp;quot; ; var str2 = new String(&amp;quot;string2&amp;quot;);   两种方式的差别:str1是一个字符串，类型是string ，而str2则是对象“ string2”的引用，类型是对">
+<meta name="keywords" content="JavaScript,前端基础,动态网页编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript 字符串操作">
+<meta property="og:url" content="http://yoursite.com/2017/04/28/JS字符串操作/index.html">
+<meta property="og:site_name" content="coco阿斌">
+<meta property="og:description" content="JS字符串操作 “字符串对象”是Javascript内置的字符块处理对象，用于定义及处理字符串。   声明字符串的两种方法:  var str1 = &amp;quot;string1&amp;quot; ; var str2 = new String(&amp;quot;string2&amp;quot;);   两种方式的差别:str1是一个字符串，类型是string ，而str2则是对象“ string2”的引用，类型是对">
+<meta property="og:updated_time" content="2017-10-26T09:37:53.078Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript 字符串操作">
+<meta name="twitter:description" content="JS字符串操作 “字符串对象”是Javascript内置的字符块处理对象，用于定义及处理字符串。   声明字符串的两种方法:  var str1 = &amp;quot;string1&amp;quot; ; var str2 = new String(&amp;quot;string2&amp;quot;);   两种方式的差别:str1是一个字符串，类型是string ，而str2则是对象“ string2”的引用，类型是对">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+
+
+    <iframe   style="display: none;" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=448144044&auto=1&height=66"></iframe>
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">ZhouBin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归类</span>
+                    </a>
+                    
+                    <a  href="/404.html">
+                        <i class="fa fa-user"></i>
+                        <span>公益</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/img/logozw.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        ZhouBin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        路的尽头，仍然有路，只要你愿意走
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//zhoubin0.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/zhoubin0">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/5544518235">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//user.qzone.qq.com/316717682/">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-JS字符串操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      javascript 字符串操作
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/学习/">学习</a>
+                  
+                      <a href="/categories/动态网页编程/">动态网页编程</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-04-28
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="JS字符串操作"><a href="#JS字符串操作" class="headerlink" title="JS字符串操作"></a><strong>JS字符串操作</strong></h1><blockquote>
+<p><strong>“字符串对象”是Javascript内置的字符块处理对象，用于定义及处理字符串。</strong></p>
+</blockquote>
+<ol>
+<li><p><strong>声明字符串的两种方法:</strong></p>
+<ul>
+<li><strong><code>var str1 = &quot;string1&quot; ;</code></strong></li>
+<li><strong><code>var str2 = new String(&quot;string2&quot;);</code></strong></li>
+</ul>
+<blockquote>
+<p><strong>两种方式的差别:str1是一个字符串，类型是string ，而str2则是对象“ string2”的引用，类型是对象。如果引用被修改，str2也会被修改</strong></p>
+</blockquote>
+</li>
+<li><p><strong>字符串操作方法</strong></p>
+<ol>
+<li><strong>charAt() 返回指定位置的字符</strong></li>
+<li><strong>charCodeAt() 返回指定位置的字符的Unicode编码</strong></li>
+<li><strong>search() 用于检索字符串中指定的子字符串</strong></li>
+<li><strong>replace() 查找匹配指定的字符串，然后用新字符串代替匹配的字符串</strong></li>
+<li><strong>concat() 将两个或多个字符的文本组合起来，返回一个新的字符串</strong></li>
+<li><strong>使用加号链接字符串。 newStr = “string1”+”string2”</strong></li>
+<li><strong>indexOf() 返回字符串中一个子串第一处出现的索引。如果没有匹配项，返回 -1</strong></li>
+<li><strong>lastIndexOf() 返回字符串中一个子串最后一处出现的索引，如果没有匹配项，返回 -1</strong></li>
+<li><strong>slice() 提取字符串的一部分，并返回一个新字符串。两个参数，第一个为起始位置，第二个为终止位置（留头不留尾），如果没有end，就取到末尾</strong></li>
+<li><strong>substring() 返回字符串的一个子串。传入参数是起始位置和结束位置。（留头不留尾），如果没有end，就取到末尾</strong></li>
+<li><strong>split() 通过将字符串划分成子串，将一个字符串做成一个字符串数组。</strong></li>
+<li><strong>Length 返回字符串的长度（其包含的字符的个数）</strong></li>
+<li><strong>toLowerCase() 将整个字符串转成小写字母</strong></li>
+<li><strong>toUpperCase() 将整个字符串转成大写字母</strong></li>
+<li><strong>转义字符 \</strong><br><strong>我们平时想输出一个双引号（“”）我们会这样写：</strong><br><strong><code>document.write(“””);</code></strong><br><strong>但是这样写是错诨的,所以我们需要用到转义字符：</strong><br><strong><code>document.write(“ \””);</code></strong></li>
+</ol>
+</li>
+</ol>
+<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a><strong>JSON</strong></h1><blockquote>
+<p><strong>JSON，全称是JavaScript Object Notation。它是基于JavaScript编程诧言ECMA-262 3rd EditionDecember 1999标准的一种轻量级的数据交换格式，主要用于跟服务器进行交换数据。跟XML相类似，它独立诧言，在跨平台数据传输上有很大的优势。</strong></p>
+</blockquote>
+<ol>
+<li><p><strong>JSON的书写格式：</strong></p>
+<ol>
+<li><p><strong>格式一：<code>{ “name”:“ xiaoming”, “age”:“22”, “email”:&quot;jone@163.com&quot; };</code></strong></p>
+<ol>
+<li><strong>格式二:</strong>                        </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">&quot;name&quot;:&quot;xiaoming&quot;,  </div><div class="line">&quot;age&quot;:&quot;22&quot;,  </div><div class="line">&quot;friends&quot;:[  </div><div class="line">	&#123;&quot;name&quot;:&#123;&quot;firstName&quot;:&quot;liu&quot;,&quot;lastName&quot;:&quot;wei&quot;&#125;,&quot;age&quot;:&quot;23&quot;&#125;,  </div><div class="line">	&#123;&quot;name&quot;:&#123;&quot;firstName&quot;:&quot;li&quot;,&quot;lastName&quot;:&quot;mei&quot;&#125;,&quot;age&quot;:&quot;27&quot;&#125;  </div><div class="line">]  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>取值</strong></p>
+<ul>
+<li><strong>用“点”来取得相应的值，如<code>JSON.name</code></strong></li>
+</ul>
+</li>
+<li><p><strong>JSON和字符串之间转换</strong></p>
+<ol>
+<li><strong>JSON.stringify(json)</strong></li>
+<li><strong>JSON.parse(str)</strong></li>
+</ol>
+</li>
+<li><p><strong>JSON拷贝</strong></p>
+<blockquote>
+<p><strong>深拷贝,浅拷贝</strong></p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="This-关键字"><a href="#This-关键字" class="headerlink" title="This 关键字"></a><strong>This 关键字</strong></h1><ol>
+<li><p><strong>this概念 :</strong></p>
+<ol>
+<li><p><strong>this是Javascript诧言的一个关键字它代表函数运行时，自劢生成的一个内部对象，只能在函数内部使用</strong></p>
+</li>
+<li><p><strong>三种情况下的this指向:</strong></p>
+<ol>
+<li><strong>纯粹的函数调用: this指向调用函数的对象</strong></li>
+<li><strong>作为对象方法的调用: this指向调用这个方法的对象</strong></li>
+<li><strong>作为构造函数调用: this指向构造函数的实例</strong></li>
+</ol>
+</li>
+<li><p><strong>修改this指向:</strong></p>
+<ol>
+<li><p><strong>使用call()方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. 语法：call(thisObj，Object)</div><div class="line">2. 定义：调用一个对象的一个方法，以另一个对象替换当前对象</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>使用apply()方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. 语法：apply(thisObj，[argArray])</div><div class="line">2.  定义：应用某一对象的一个方法，用另一个对象替换当前对象</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p><strong>使用new关键字</strong></p>
+</li>
+</ol>
+</li>
+</ol>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年10月26日 17:37</p>
+        <p>原始链接： <a class="post-url" href="/2017/04/28/JS字符串操作/" title="javascript 字符串操作">http://yoursite.com/2017/04/28/JS字符串操作/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/img/logozw.jpg" alt="周斌">
+                周斌
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/28/JS字符串操作/&title=《javascript 字符串操作》 — coco阿斌&pic=http://yoursite.comimg/logozw.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/28/JS字符串操作/&title=《javascript 字符串操作》 — coco阿斌&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/28/JS字符串操作/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javascript 字符串操作》 — coco阿斌&url=http://yoursite.com/2017/04/28/JS字符串操作/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/28/JS字符串操作/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/28/JS字符串操作/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/前端基础/" class="color5">前端基础</a>
+      
+    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JS字符串操作"><span class="post-toc-text">JS字符串操作</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSON"><span class="post-toc-text">JSON</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#This-关键字"><span class="post-toc-text">This 关键字</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/05/01/window对象的事件/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          javascript 对象的事件
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/04/25/JQuery 基础二/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">JQuery 基础</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="JS字符串操作" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cythQ8OuD';
+        var conf = '11d33834dab0216e0550f122951c3687';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 周斌<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/学习/">学习</a><a class="category-link" href="/categories/学习/动态网页编程/">动态网页编程</a><a class="category-link" href="/categories/学习/励志故事/">励志故事</a><a class="category-link" href="/categories/学习/情感/">情感</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归类</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/404.html">
+                    <i class="fa fa-user"></i><span>公益</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>

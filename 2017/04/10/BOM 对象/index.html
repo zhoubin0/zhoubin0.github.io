@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>javascript Bom 对象 | coco阿斌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ZhouBin,ZhouBin's Blog" />
+  
+  <meta name="description" content="Window 对象##概念：  Window 对象表示浏览器中打开的窗口。如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象 属性 innerHeight 返回窗口的文档显示区的高度 innerWidth 返回窗口的文档显示区的宽度 outerHeight 返回窗口的外部高度 包括滚动条、地">
+<meta name="keywords" content="JavaScript,前端基础,动态网页编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript Bom 对象">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/BOM 对象/index.html">
+<meta property="og:site_name" content="coco阿斌">
+<meta property="og:description" content="Window 对象##概念：  Window 对象表示浏览器中打开的窗口。如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象 属性 innerHeight 返回窗口的文档显示区的高度 innerWidth 返回窗口的文档显示区的宽度 outerHeight 返回窗口的外部高度 包括滚动条、地">
+<meta property="og:updated_time" content="2017-10-26T09:37:53.146Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript Bom 对象">
+<meta name="twitter:description" content="Window 对象##概念：  Window 对象表示浏览器中打开的窗口。如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象 属性 innerHeight 返回窗口的文档显示区的高度 innerWidth 返回窗口的文档显示区的宽度 outerHeight 返回窗口的外部高度 包括滚动条、地">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+
+
+    <iframe   style="display: none;" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=448144044&auto=1&height=66"></iframe>
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">ZhouBin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归类</span>
+                    </a>
+                    
+                    <a  href="/404.html">
+                        <i class="fa fa-user"></i>
+                        <span>公益</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/img/logozw.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        ZhouBin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        路的尽头，仍然有路，只要你愿意走
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//zhoubin0.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/zhoubin0">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/5544518235">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//user.qzone.qq.com/316717682/">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-BOM 对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      javascript Bom 对象
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/学习/">学习</a>
+                  
+                      <a href="/categories/动态网页编程/">动态网页编程</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-04-10
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="Window-对象"><a href="#Window-对象" class="headerlink" title="Window 对象"></a><strong>Window 对象</strong></h1><p><strong>##概念：</strong></p>
+<blockquote>
+<p><strong>Window 对象表示浏览器中打开的窗口。如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象</strong></p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a><strong>属性</strong></h2><ul>
+<li><strong>innerHeight 返回窗口的文档显示区的高度</strong></li>
+<li><strong>innerWidth 返回窗口的文档显示区的宽度</strong></li>
+<li><strong>outerHeight 返回窗口的外部高度 包括滚动条、地址栏、收藏栏等</strong></li>
+<li><strong>outerwidth 返回窗口的外部宽度</strong></li>
+<li><strong>length 设置或返回窗口中的框架数量</strong></li>
+<li><strong>name 设置或返回窗口的名称。</strong><ul>
+<li><strong>window.open() 打开的新网页，第二个参数就是此网页的name。</strong></li>
+<li><strong>iframe里面，name属性就是window的name</strong></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a><strong>方法</strong></h2><ul>
+<li><strong>close() 关闭浏览器窗口</strong></li>
+<li><strong>alert() 显示带有一段消息和一个确认按钮的警告框</strong></li>
+<li><strong>confirm() 显示带有一段消息以及确认按钮和取消按钮的对话框</strong></li>
+<li><strong>prompt()显示可提示用户输入的对话框</strong></li>
+<li><strong>open() 打开一个新的浏览器窗口或查找一个已命名的窗口</strong></li>
+<li><strong>resizeBy() 按照指定的像素调整窗口的大小</strong></li>
+<li><strong>resizeTo() 把窗口的大小调整到指定的宽度和高度</strong></li>
+<li><strong>scrollBy() 按照指定的像素值来滚动内容</strong></li>
+<li><strong>scrollTo() 把内容滚动到指定的坐标</strong></li>
+</ul>
+<h1 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a><strong>navigator对象</strong></h1><blockquote>
+<p><strong>navigator对象通常用于检测浏览器不操作系统的版本</strong></p>
+<p><strong>##属性：</strong></p>
+<ul>
+<li><strong>appCodeName返回浏览器的代码名</strong></li>
+<li><strong>appVersion返回浏览器的次级版本</strong></li>
+<li><strong>appName返回浏览器的名称</strong></li>
+<li><strong>language返回当前浏览器的语言</strong></li>
+<li><strong>platform 返回运行浏览器的操作系统平台</strong></li>
+</ul>
+</blockquote>
+<h1 id="document对象"><a href="#document对象" class="headerlink" title="document对象"></a><strong>document对象</strong></h1><blockquote>
+<p><strong>document 对象是 Window 对象的一部分，包含整个htmlDOM,可通过 window.document 属性对其进行访问,也可以用document直接访问</strong></p>
+</blockquote>
+<p><strong>##属性:</strong></p>
+<ul>
+<li><strong>document.cookie 获取或设置cookie</strong></li>
+<li><strong>document.title 获取或设置title</strong></li>
+<li><strong>document.URL 获取或设置URL</strong></li>
+</ul>
+<h2 id="window下的其他对象"><a href="#window下的其他对象" class="headerlink" title="window下的其他对象"></a><strong>window下的其他对象</strong></h2><blockquote>
+<p><strong>screen 对象包含有关客户端显示屏幕的信息</strong></p>
+</blockquote>
+<h3 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a><strong>属性</strong></h3><ul>
+<li><strong>height 返回显示屏幕的高度； width返回显示器屏幕的宽度</strong></li>
+<li><strong>availHeight 返回显示屏幕的高度 (除 Windows 任务栏之外)</strong></li>
+<li><strong>availWidth 返回显示屏幕的宽度 (除 Windows 任务栏之外)</strong></li>
+<li><strong>colorDepth 返回目标设备或缓冲器上的调色板的比特深度</strong></li>
+<li><strong>pixelDepth 返回显示屏幕的颜色分辨率（比特每像素）</strong></li>
+</ul>
+<h2 id="Body对象"><a href="#Body对象" class="headerlink" title="Body对象"></a><strong>Body对象</strong></h2><h3 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a><strong>属性</strong></h3><ul>
+<li><strong>clientWidth网页可见区域宽</strong></li>
+<li><strong>clientHeight网页可见区域高</strong></li>
+<li><strong>scrollWidth网页正文全文宽</strong></li>
+<li><strong>scrollHeight网页正文全文高</strong></li>
+<li><strong>scrollTop网页被卷去的高</strong></li>
+<li><strong>scrollLeft网页被卷去的左</strong></li>
+</ul>
+<p><strong>##Location 对象</strong></p>
+<blockquote>
+<p><strong>Location 对象对象包含有关当前 URL 的信息</strong></p>
+<h3 id="属性-3"><a href="#属性-3" class="headerlink" title="属性"></a><strong>属性</strong></h3><ul>
+<li><strong>hash设置或返回从井号 (#) 开始的 URL（锚）</strong></li>
+<li><strong>host设置或返回主机名和当前 URL 的端口号</strong></li>
+<li><strong>hostname设置或返回当前 URL 的主机名</strong></li>
+<li><strong>href设置或返回完整的 URL</strong></li>
+<li><strong>pathname设置或返回当前 URL 的路径部分</strong></li>
+<li><strong>port设置或返回当前 URL 的端口号</strong></li>
+<li><strong>protocol设置或返回当前 URL 的协议</strong></li>
+<li><strong>search设置或返回从问号 (?) 开始的 URL（查询部分）</strong></li>
+</ul>
+</blockquote>
+<p><strong>###方法</strong></p>
+<ul>
+<li><strong>assign() 加载新的文档</strong></li>
+<li><strong>reload() 重新加载当前文档</strong></li>
+<li><strong>replace() 用新的文档替换当前文档</strong></li>
+</ul>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年10月26日 17:37</p>
+        <p>原始链接： <a class="post-url" href="/2017/04/10/BOM 对象/" title="javascript Bom 对象">http://yoursite.com/2017/04/10/BOM 对象/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/img/logozw.jpg" alt="周斌">
+                周斌
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/10/BOM 对象/&title=《javascript Bom 对象》 — coco阿斌&pic=http://yoursite.comimg/logozw.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/10/BOM 对象/&title=《javascript Bom 对象》 — coco阿斌&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/10/BOM 对象/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javascript Bom 对象》 — coco阿斌&url=http://yoursite.com/2017/04/10/BOM 对象/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/10/BOM 对象/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/10/BOM 对象/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/前端基础/" class="color5">前端基础</a>
+      
+    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Window-对象"><span class="post-toc-text">Window 对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#属性"><span class="post-toc-text">属性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法"><span class="post-toc-text">方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#navigator对象"><span class="post-toc-text">navigator对象</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#document对象"><span class="post-toc-text">document对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#window下的其他对象"><span class="post-toc-text">window下的其他对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#属性-1"><span class="post-toc-text">属性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Body对象"><span class="post-toc-text">Body对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#属性-2"><span class="post-toc-text">属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#属性-3"><span class="post-toc-text">属性</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/04/10/数组方法/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          javascript 数组方法
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/04/10/07 01  javascript/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">javascript基本对象,数据类型,常量,变量</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="BOM 对象" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cythQ8OuD';
+        var conf = '11d33834dab0216e0550f122951c3687';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 周斌<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/学习/">学习</a><a class="category-link" href="/categories/学习/动态网页编程/">动态网页编程</a><a class="category-link" href="/categories/学习/励志故事/">励志故事</a><a class="category-link" href="/categories/学习/情感/">情感</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归类</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/404.html">
+                    <i class="fa fa-user"></i><span>公益</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>

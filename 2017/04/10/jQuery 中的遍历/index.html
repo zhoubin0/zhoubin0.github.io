@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JQuery中的遍历 | coco阿斌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ZhouBin,ZhouBin's Blog" />
+  
+  <meta name="description" content="jQuery 中的遍历 jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。jQ遍历分为四种，1. 想上遍历 2. 向下遍历 3. 过滤 4. 水平遍历   .eq 过滤遍历  用法 1$(&amp;apos;li&amp;apos;).eq(0).css(&amp;apos;background&amp;apos;,&amp;apos;r">
+<meta name="keywords" content="JavaScript,前端基础,动态网页编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JQuery中的遍历">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/jQuery 中的遍历/index.html">
+<meta property="og:site_name" content="coco阿斌">
+<meta property="og:description" content="jQuery 中的遍历 jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。jQ遍历分为四种，1. 想上遍历 2. 向下遍历 3. 过滤 4. 水平遍历   .eq 过滤遍历  用法 1$(&amp;apos;li&amp;apos;).eq(0).css(&amp;apos;background&amp;apos;,&amp;apos;r">
+<meta property="og:updated_time" content="2017-10-26T09:37:53.061Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JQuery中的遍历">
+<meta name="twitter:description" content="jQuery 中的遍历 jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。jQ遍历分为四种，1. 想上遍历 2. 向下遍历 3. 过滤 4. 水平遍历   .eq 过滤遍历  用法 1$(&amp;apos;li&amp;apos;).eq(0).css(&amp;apos;background&amp;apos;,&amp;apos;r">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+
+
+    <iframe   style="display: none;" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=448144044&auto=1&height=66"></iframe>
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">ZhouBin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归类</span>
+                    </a>
+                    
+                    <a  href="/404.html">
+                        <i class="fa fa-user"></i>
+                        <span>公益</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/img/logozw.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        ZhouBin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        路的尽头，仍然有路，只要你愿意走
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//zhoubin0.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/zhoubin0">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/5544518235">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//user.qzone.qq.com/316717682/">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-jQuery 中的遍历" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      JQuery中的遍历
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/学习/">学习</a>
+                  
+                      <a href="/categories/动态网页编程/">动态网页编程</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-04-10
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h2 id="jQuery-中的遍历"><a href="#jQuery-中的遍历" class="headerlink" title="jQuery 中的遍历"></a>jQuery 中的遍历</h2><blockquote>
+<p>jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。<br><strong>jQ遍历分为四种，1. 想上遍历 2. 向下遍历 3. 过滤 4. 水平遍历</strong></p>
+</blockquote>
+<ul>
+<li><p><strong>.eq </strong>过滤遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;li&apos;).eq(0).css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>第几个，从零开始</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>.first()</strong> 过滤遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;li&apos;).first().css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>第一个</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>.last()</strong> 过滤遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;li&apos;).last().css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>最后一个</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>.slice()</strong> 过滤遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;li&apos;).slice(2,4).css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>第几个到第几个，下标从零开始，要头不要尾</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>.children(选择器)</strong> 向下遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;ul&apos;).children(&apos;div&apos;).css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有ul标签中的<strong>所有【直接子元素】是选择器的元素</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>.find(选择器)</strong> 向下遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;ul&apos;).find(&apos;div&apos;).css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有ul标签中的<strong>所有后代是选择器的元素</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>.parent()</strong> 向上遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;ul&apos;).parent().css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>返回ul的<strong>直接父元素</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>更多遍历方法</p>
+<ul>
+<li>向上遍历 （查找元素祖先）</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>遍历方法</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parent()</td>
+<td>返回被选元素的直接父元素 (只会向下一级对 DOM 树进行遍历 )</td>
+<td>$(“span”).parent();</td>
+</tr>
+<tr>
+<td>parents()</td>
+<td>返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<code>&lt;html&gt;</code>)</td>
+<td>$(“span”).parents();$(“span”).parents(“ul”)返回所有 <code>&lt;span&gt;</code> 元素的所有祖先，并且它是<code>&lt;ul&gt;</code> 元素</td>
+</tr>
+<tr>
+<td>parentsUntil()</td>
+<td>返回介于两个给定元素之间的所有祖先元素</td>
+<td>$(“span”).parentsUntil(“div”);</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* 向下遍历（查找元素后代）</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>遍历方法</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>children()</td>
+<td>返回被选元素的所有直接子元素(只会向下一级对 DOM 树进行遍历 )</td>
+<td>$(“div”).children()$(“div”).children(“p.1”)返回类名为 “1” 的所有 <code>&lt;p&gt;</code> 元素，并且它们是<code>&lt;div&gt;</code> 的直接子元素</td>
+</tr>
+<tr>
+<td>find()</td>
+<td>返回被选元素的后代元素，一路向下直到最后一个后代</td>
+<td>$(“div”).find(“span”);$(“div”).find(“*”);返回 <code>&lt;div&gt;</code> 的所有后代</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* 水平遍历方法(元素同胞元素)：</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>遍历方法</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>siblings()</td>
+<td>返回被选元素的所有同胞元素</td>
+<td>$(“h2”).siblings();$(“h2”).siblings(“p”);返回属于 <code>&lt;h2&gt;</code> 的同胞元素的所有 <code>&lt;p&gt;</code> 元素</td>
+</tr>
+<tr>
+<td>next() prev()</td>
+<td>返回被选元素的下一个/上一个同胞元素</td>
+<td>$(“h2”).next();</td>
+</tr>
+<tr>
+<td>nextAll()prevAll()</td>
+<td>返回被选元素的所有跟随的同胞（前面同胞）元素</td>
+<td>$(“h2”).nextAll();</td>
+</tr>
+<tr>
+<td>nextUntil()prevUntil()</td>
+<td>返回介于两个给定参数之间的所有跟随的同胞（前面同胞）元素</td>
+<td>$(“h2”).nextUntil(“h6”);</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* 过滤：</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>遍历方法</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>first()</td>
+<td>返回被选元素的首个元素</td>
+<td>$(“div p”).first();</td>
+</tr>
+<tr>
+<td>last()</td>
+<td>返回被选元素的最后一个元素</td>
+<td>$(“div p”).last();</td>
+</tr>
+<tr>
+<td>eq()</td>
+<td>返回被选元素中带有指定索引号的元素</td>
+<td>$(“p”).eq(1);</td>
+</tr>
+<tr>
+<td>filter()</td>
+<td>不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回</td>
+<td>$(“p”).filter(“.intro”);</td>
+</tr>
+<tr>
+<td>not() not()</td>
+<td>方法返回不匹配标准的所有元素not() 方法不 filter() 相反。</td>
+<td>$(“p”).not(“.intro”);</td>
+</tr>
+</tbody>
+</table>
+<p><code>* 遍历所有 **each遍历：**    * each()方法规定为每个匹配元素指定运行的函数        &gt; 语法：</code>$(selector).each(function(index,element))<code>* 例如         $(&quot;button&quot;).click(function(){    $(&quot;li&quot;).each(function(){    alert($(this).text())   });});</code></p>
+<h2 id="jQuery制作下拉列表"><a href="#jQuery制作下拉列表" class="headerlink" title="jQuery制作下拉列表"></a>jQuery制作下拉列表</h2><ul>
+<li>下拉列表<ul>
+<li>三级下拉列表（竖向）：单击一级菜单时展开二级菜单，单击二级菜单时展开三级菜单，当单击另一个一级菜单时同级其它菜单将收起。</li>
+</ul>
+</li>
+<li>多级下拉列表（横向）：<ul>
+<li>鼠标经过一级菜单时展开二级菜单，经过二级菜单<br>时展开三级菜单，依次类推</li>
+</ul>
+</li>
+</ul>
+<h2 id="easing-js的使用"><a href="#easing-js的使用" class="headerlink" title="easing.js的使用"></a>easing.js的使用</h2><blockquote>
+<p><a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank" rel="external">easing.js</a>是个极小的 JavaScript 第三方包，支持 CSS3 的动画效果，非常简单美观。<br>move.js中有编写了多种效果</p>
+</blockquote>
+<ul>
+<li>老规矩，要使用，先引用<code>&lt;script src=&quot;js/jquery-1.8.3.min.js&quot;&gt;&lt;/script&gt;// easing是基于jQ的，说要在引用他之前要先引用jQ&lt;script src=&quot;js/easing.js&quot;&gt;&lt;/script&gt;</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(this).find(&quot;ul&quot;).sto</div><div class="line">p().slideDown(600,&apos;效果名称&apos;);</div><div class="line"></div><div class="line">//我们只需在这更换效果名称即可：如easeIn,easeOut，elasticOut等。</div></pre></td></tr></table></figure>
+<h2 id="animate-css的使用"><a href="#animate-css的使用" class="headerlink" title="animate.css的使用"></a>animate.css的使用</h2><blockquote>
+<p><a href="http://www.dowebok.com/demo/2014/98/" target="_blank" rel="external">animate.css</a>animate.css 是一个来自国外的 CSS3 动画库，它预设了抖动（shake）、闪烁（flash）、弹跳（bounce）、翻转（flip）、旋转（rotateIn/rotateOut）、淡入淡出（fadeIn/fadeOut）等多达 60 多种动画效果，几乎包含了所有常见的动画效果。</p>
+</blockquote>
+<p>虽然借助 animate.css 能够很方便、快速的制作 CSS3 动画效果，但还是建议看看 animate.css 的代码，也许你能从中学到一些东西。</p>
+<ul>
+<li><p>使用</p>
+<blockquote>
+<p>引入文件：<code>&lt;link href=&quot;animate.css&quot; type=&quot;text/css&quot; /&gt;</code><br>HTML及使用：<code>&lt;div class=“animated bounce” &gt;&lt;/div&gt;</code><br>刷新页面就可看到动画效果</p>
+</blockquote>
+</li>
+</ul>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年10月26日 17:37</p>
+        <p>原始链接： <a class="post-url" href="/2017/04/10/jQuery 中的遍历/" title="JQuery中的遍历">http://yoursite.com/2017/04/10/jQuery 中的遍历/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/img/logozw.jpg" alt="周斌">
+                周斌
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/10/jQuery 中的遍历/&title=《JQuery中的遍历》 — coco阿斌&pic=http://yoursite.comimg/logozw.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/10/jQuery 中的遍历/&title=《JQuery中的遍历》 — coco阿斌&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/10/jQuery 中的遍历/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JQuery中的遍历》 — coco阿斌&url=http://yoursite.com/2017/04/10/jQuery 中的遍历/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/10/jQuery 中的遍历/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/10/jQuery 中的遍历/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/前端基础/" class="color5">前端基础</a>
+      
+    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#jQuery-中的遍历"><span class="post-toc-text">jQuery 中的遍历</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#jQuery制作下拉列表"><span class="post-toc-text">jQuery制作下拉列表</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#easing-js的使用"><span class="post-toc-text">easing.js的使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#animate-css的使用"><span class="post-toc-text">animate.css的使用</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/04/10/07 01  javascript/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          javascript基本对象,数据类型,常量,变量
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/04/10/javascript 基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">JavaScript基础引入</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="jQuery 中的遍历" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cythQ8OuD';
+        var conf = '11d33834dab0216e0550f122951c3687';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 周斌<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/学习/">学习</a><a class="category-link" href="/categories/学习/动态网页编程/">动态网页编程</a><a class="category-link" href="/categories/学习/励志故事/">励志故事</a><a class="category-link" href="/categories/学习/情感/">情感</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归类</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/404.html">
+                    <i class="fa fa-user"></i><span>公益</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JQuery 基础 | coco阿斌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ZhouBin,ZhouBin's Blog" />
+  
+  <meta name="description" content="JQuery 基础二鼠标键盘事件 鼠标事件     事件名称 描述 举例说明     mousedown 当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown事件 $(“button”).mousedown(function(){$(“p”).slideToggle()   mouseup 当在元素上放松鼠标按钮时，会发生mouseup 事件 $(“button”).mouseu">
+<meta name="keywords" content="JavaScript,前端基础,动态网页编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JQuery 基础">
+<meta property="og:url" content="http://yoursite.com/2017/04/25/JQuery 基础二/index.html">
+<meta property="og:site_name" content="coco阿斌">
+<meta property="og:description" content="JQuery 基础二鼠标键盘事件 鼠标事件     事件名称 描述 举例说明     mousedown 当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown事件 $(“button”).mousedown(function(){$(“p”).slideToggle()   mouseup 当在元素上放松鼠标按钮时，会发生mouseup 事件 $(“button”).mouseu">
+<meta property="og:updated_time" content="2017-10-26T09:37:53.092Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JQuery 基础">
+<meta name="twitter:description" content="JQuery 基础二鼠标键盘事件 鼠标事件     事件名称 描述 举例说明     mousedown 当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown事件 $(“button”).mousedown(function(){$(“p”).slideToggle()   mouseup 当在元素上放松鼠标按钮时，会发生mouseup 事件 $(“button”).mouseu">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+
+
+    <iframe   style="display: none;" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=448144044&auto=1&height=66"></iframe>
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">ZhouBin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归类</span>
+                    </a>
+                    
+                    <a  href="/404.html">
+                        <i class="fa fa-user"></i>
+                        <span>公益</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/img/logozw.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        ZhouBin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        路的尽头，仍然有路，只要你愿意走
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//zhoubin0.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/zhoubin0">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/5544518235">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//user.qzone.qq.com/316717682/">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-JQuery 基础二" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      JQuery 基础
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/学习/">学习</a>
+                  
+                      <a href="/categories/动态网页编程/">动态网页编程</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-04-25
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="JQuery-基础二"><a href="#JQuery-基础二" class="headerlink" title="JQuery 基础二"></a>JQuery 基础二</h1><h2 id="鼠标键盘事件"><a href="#鼠标键盘事件" class="headerlink" title="鼠标键盘事件"></a>鼠标键盘事件</h2><ul>
+<li>鼠标事件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>描述</th>
+<th>举例说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mousedown</td>
+<td>当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown事件</td>
+<td>$(“button”).mousedown(function(){$(“p”).slideToggle()</td>
+</tr>
+<tr>
+<td>mouseup</td>
+<td>当在元素上放松鼠标按钮时，会发生mouseup 事件</td>
+<td>$(“button”).mouseup(function(){$(“p”).slideToggle();})</td>
+</tr>
+<tr>
+<td>mouseenter</td>
+<td>当鼠标指针穿过元素时，会发生mouseenter 事件</td>
+<td>$(“p”).mouseenter(function(){$(“p”).css(“backgroundcolor”,”yellow”); });</td>
+</tr>
+<tr>
+<td>mousemove</td>
+<td>当鼠标指针在指定的元素中移动时，就会发生 mousemove 事件</td>
+<td>$(“button”).mousemove(function(){})</td>
+</tr>
+<tr>
+<td>event.pageX</td>
+<td>pageX() 属性是鼠标指针的位置，相对于文档的左边缘</td>
+<td>$(document).mousemove(function(e){$(“span”).text(“X: “ +e.pageX});</td>
+</tr>
+<tr>
+<td>event.pageY pageY()</td>
+<td>属性是鼠标指针的位置，相对于文档的上边缘</td>
+<td>$(document).mousemove(function(e){ $(“span”).text(“Y: “ +e.pageY});</td>
+</tr>
+<tr>
+<td>mouseover</td>
+<td>当鼠标指针位于元素上方时，会发生mouseover 事件</td>
+<td>$(“button”).mouseover(function(){})</td>
+</tr>
+<tr>
+<td>event.preventDefault();</td>
+<td>阻止元素发生默认的行为</td>
+<td>$(“a”).click(function(event){event.preventDefault(); });</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>键盘事件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>描述</th>
+<th>举例说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keydown</td>
+<td>当按钮被按下时，发生 keydown 事件</td>
+<td>$(“input”).keydown(function(){$(“input”).css(“color”,”#FFFFCC”); });</td>
+</tr>
+<tr>
+<td>keypress</td>
+<td>当按钮被按下时，会发生该事件。它发生在当前获得焦点的元素上</td>
+<td>$(“input”).keypress(function(){$(“span”).text(i+=1);});</td>
+</tr>
+<tr>
+<td>keyup</td>
+<td>当按钮被松开时，发生 keyup 事件。它发生在当前获得焦点的元素上。</td>
+<td>$(“input”).keyup(function(){$(“input”).css(“color”,”#D6D6FF”);});</td>
+</tr>
+</tbody>
+</table>
+<h2 id="标签的添加删除"><a href="#标签的添加删除" class="headerlink" title="标签的添加删除"></a>标签的添加删除</h2><ul>
+<li><p>添加元素：</p>
+<ul>
+<li><p>append() - 在被选元素的尾部插入内容</p>
+</li>
+<li><p>appendTo() – 在被选元素的结尾（仍然在内部）插入指定内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(“p”).append(“ World.”);</div><div class="line">//如p标签的原文本为:“Hello”</div><div class="line">//则现文本为： Hello World.等同于</div><div class="line">$(&quot;&lt;b&gt;World.&lt;/b&gt;&quot;).appendTo(&quot;p&quot;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>添加元素</p>
+<ul>
+<li><p>prepend() - 在被选元素的开头插入内容</p>
+</li>
+<li><p>prependTo() - 在被选元素的开头（仍位于内部）插入指定内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(“p”).prepend(“ 你好，”);</div><div class="line">//如p标签的原文本为:“ 李明”</div><div class="line">//则现文本为： 你好，李明等同于</div><div class="line">//$(&quot;你好&quot;).prependTo(&quot;p&quot;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>添加元素</p>
+<ul>
+<li><p>append()和prepend()方法添加若干新元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function appendText() &#123;</div><div class="line">var txt1=“&lt;p&gt;Text.&lt;/p&gt;”; // 以 HTML 创建新元素</div><div class="line">var txt2=$(“&lt;p&gt;&lt;/p&gt;”).text(“Text.”); // 以 jQuery 创建新元素</div><div class="line">var txt3=document.createElement(“p”); // 以DOM 创建新元素</div><div class="line">txt3.innerHTML=&quot;Text.&quot;;</div><div class="line">$(&quot;p&quot;).append(txt1,txt2,txt3); // 追加新元素 </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>添加元素</p>
+<ul>
+<li>after() – 在被选元素之后插入内容</li>
+<li>before – 在被选元素之前插入内容</li>
+</ul>
+</li>
+<li><p>after()和before() 方法添加若干新元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function afterText() &#123;</div><div class="line">var txt1=“&lt;b&gt;I &lt;/b&gt;”; // 以 HTML 创建新元素</div><div class="line">var txt2=$(“&lt;i&gt;&lt;/i&gt;”).text(“love ”); // 通过 jQuery 创建新元素</div><div class="line">var txt3=document.createElement(“big”); // 通过 DOM 创建新元素</div><div class="line">txt3.innerHTML=&quot;jQuery!&quot;;</div><div class="line">$(&quot;img&quot;).after(txt1,txt2,txt3); // 在 img 之后插入新元素</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="思考问题："><a href="#思考问题：" class="headerlink" title="思考问题："></a>思考问题：</h4><blockquote>
+<p>append()和preappend()与after()和before()区别：<br>append() &amp; prepend()是在元素内插入内容（该内容变成该元素的子元素或节点）<br>after() &amp; before()是在元素的外面插入内容（其内容变成元素的兄弟节点）</p>
+</blockquote>
+<ul>
+<li><p>删除元素</p>
+<ul>
+<li><p>remove() - 删除被选元素（及其子元素）</p>
+<blockquote>
+<p>例：$(“#div1”).remove(); //删除的是div1的</p>
+</blockquote>
+</li>
+<li><p>remove() – 过滤被删除的元素</p>
+<blockquote>
+<p>remove() 方法也可接受一个参数，允许被删元素进行过滤。该参数可以是任何 jQuery 选择器的语法。<br><code>$(“p”).remove(“.italic”);//删除 class=&quot;italic&quot; 的所有 &lt;p&gt; 元素</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>删除元素</p>
+<ul>
+<li>removeAttr()从被选元素中移除属性<br>例：$(“p”).removeAttr(“id”);</li>
+</ul>
+</li>
+</ul>
+<h2 id="属性的获取设置"><a href="#属性的获取设置" class="headerlink" title="属性的获取设置"></a>属性的获取设置</h2><ul>
+<li><p>设置内容 – text() 、 html()、以及val()</p>
+<ul>
+<li><p>获取内容语法：$(selector).text()</p>
+</li>
+<li><p>设置内容语法：$(selector).text(“设置内容” )</p>
+<blockquote>
+<p>其它两个方法语法一样</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>text()、 html() 以及 val()的回调函数<br>回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(&quot;#btn1&quot;).click(function()&#123;</div><div class="line">$(&quot;#test1&quot;).text(function(i,origText)&#123;</div><div class="line">return &quot;Old text: &quot; + origText + &quot; New text: Hello &quot; +</div><div class="line">&quot; world! (index: &quot; + i + &quot;)&quot;;</div><div class="line">&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>获取属性或设置属性 – attr()<ul>
+<li>获取属性语法：$(selector).attr(“ 属性名” )</li>
+<li>设置属性语法：$(selector).attr(“属性名”，“属性值” )</li>
+</ul>
+</li>
+<li>attr()的回调函数<ul>
+<li>回调函数有两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串<code>$(&quot;button&quot;).click(function(){$(&quot;#taobao&quot;).attr(&quot;href&quot;, function(i,origValue){return origValue + &quot;/market/nvzhuang&quot;;});});</code></li>
+</ul>
+</li>
+<li>css()方法设置或返回被选元素的一个或多个样式属性。<ul>
+<li>返回CSS属性：<br>语法：css(“ 属性名” )<br>例：$(“p”).css(“color”)</li>
+<li>设置CSS属性：<br>语法：css(“ 属性名”，“属性值” )<br>例：$(“p”).css(“color” ，”#f00”)</li>
+<li>设置多个CSS属性：<br>语法：css({“ 属性名”:“ 属性值” ,属性名”:“ 属性值” ,…})<br>例 $(“p”).css({“color”:”#f00”,”background”:”#00f”)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Class的添加删除"><a href="#Class的添加删除" class="headerlink" title="Class的添加删除"></a>Class的添加删除</h2><ul>
+<li><p>addClass() – 向被选元素中添加一个或多个class类</p>
+</li>
+<li><p>removeClass() – 从被选元素删除一个或多个class类与addClass()用法相同</p>
+</li>
+<li><p>toggleClass() – 对被选元素进行添加/删除class类的切换操作</p>
+<blockquote>
+<p>该方法是对addClass()和removeClass()方法的切换</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="jQuery编写图片轮播"><a href="#jQuery编写图片轮播" class="headerlink" title="jQuery编写图片轮播"></a>jQuery编写图片轮播</h2>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年10月26日 17:37</p>
+        <p>原始链接： <a class="post-url" href="/2017/04/25/JQuery 基础二/" title="JQuery 基础">http://yoursite.com/2017/04/25/JQuery 基础二/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/img/logozw.jpg" alt="周斌">
+                周斌
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/25/JQuery 基础二/&title=《JQuery 基础》 — coco阿斌&pic=http://yoursite.comimg/logozw.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/25/JQuery 基础二/&title=《JQuery 基础》 — coco阿斌&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/25/JQuery 基础二/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JQuery 基础》 — coco阿斌&url=http://yoursite.com/2017/04/25/JQuery 基础二/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/25/JQuery 基础二/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/25/JQuery 基础二/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/前端基础/" class="color5">前端基础</a>
+      
+    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JQuery-基础二"><span class="post-toc-text">JQuery 基础二</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#鼠标键盘事件"><span class="post-toc-text">鼠标键盘事件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#标签的添加删除"><span class="post-toc-text">标签的添加删除</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思考问题："><span class="post-toc-text">思考问题：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#属性的获取设置"><span class="post-toc-text">属性的获取设置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Class的添加删除"><span class="post-toc-text">Class的添加删除</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#jQuery编写图片轮播"><span class="post-toc-text">jQuery编写图片轮播</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/04/28/JS字符串操作/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          javascript 字符串操作
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/04/20/javascript 数组/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">javascript 数组</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="JQuery 基础二" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cythQ8OuD';
+        var conf = '11d33834dab0216e0550f122951c3687';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 周斌<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/学习/">学习</a><a class="category-link" href="/categories/学习/动态网页编程/">动态网页编程</a><a class="category-link" href="/categories/学习/励志故事/">励志故事</a><a class="category-link" href="/categories/学习/情感/">情感</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归类</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/404.html">
+                    <i class="fa fa-user"></i><span>公益</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>

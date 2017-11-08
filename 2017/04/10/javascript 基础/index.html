@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaScript基础引入 | coco阿斌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="ZhouBin,ZhouBin's Blog" />
+  
+  <meta name="description" content="javascript基础简介 轻量级、直译式客户端脚本语言。 可被所有浏览器执行，实现网页的劢态功能。 揑入 HTML 页面后，可由所有的现代浏览器执行应用场景 操作页面元素，动态改变页面内容动态改变表格内容 编写页面动态效果轮播图层的切换 和 树形菜单等 数据的客户端验证－减轻服务器端压力注册表单验证 通过ajax和后端语言实现数据交互  组成: ECMAScript BOM DOM  ECM">
+<meta name="keywords" content="JavaScript,前端基础,动态网页编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript基础引入">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/javascript 基础/index.html">
+<meta property="og:site_name" content="coco阿斌">
+<meta property="og:description" content="javascript基础简介 轻量级、直译式客户端脚本语言。 可被所有浏览器执行，实现网页的劢态功能。 揑入 HTML 页面后，可由所有的现代浏览器执行应用场景 操作页面元素，动态改变页面内容动态改变表格内容 编写页面动态效果轮播图层的切换 和 树形菜单等 数据的客户端验证－减轻服务器端压力注册表单验证 通过ajax和后端语言实现数据交互  组成: ECMAScript BOM DOM  ECM">
+<meta property="og:updated_time" content="2017-07-31T02:57:29.615Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript基础引入">
+<meta name="twitter:description" content="javascript基础简介 轻量级、直译式客户端脚本语言。 可被所有浏览器执行，实现网页的劢态功能。 揑入 HTML 页面后，可由所有的现代浏览器执行应用场景 操作页面元素，动态改变页面内容动态改变表格内容 编写页面动态效果轮播图层的切换 和 树形菜单等 数据的客户端验证－减轻服务器端压力注册表单验证 通过ajax和后端语言实现数据交互  组成: ECMAScript BOM DOM  ECM">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+
+
+    <iframe   style="display: none;" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=448144044&auto=1&height=66"></iframe>
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">ZhouBin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归类</span>
+                    </a>
+                    
+                    <a  href="/404.html">
+                        <i class="fa fa-user"></i>
+                        <span>公益</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/img/logozw.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        ZhouBin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        路的尽头，仍然有路，只要你愿意走
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//zhoubin0.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/zhoubin0">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/5544518235">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//user.qzone.qq.com/316717682/">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-javascript 基础" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      JavaScript基础引入
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/学习/">学习</a>
+                  
+                      <a href="/categories/动态网页编程/">动态网页编程</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-04-10
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><strong><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27583305&auto=1&height=66"></iframe></strong></p>
+<h1 id="javascript基础"><a href="#javascript基础" class="headerlink" title="javascript基础"></a><strong>javascript基础</strong></h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h2><ul>
+<li><strong>轻量级、直译式客户端脚本语言。</strong></li>
+<li><strong>可被所有浏览器执行，实现网页的劢态功能。</strong></li>
+<li><strong>揑入 HTML 页面后，可由所有的现代浏览器执行</strong><h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a><strong>应用场景</strong></h2></li>
+<li><strong>操作页面元素，动态改变页面内容动态改变表格内容</strong></li>
+<li><strong>编写页面动态效果轮播图层的切换 和 树形菜单等</strong></li>
+<li><strong>数据的客户端验证－减轻服务器端压力注册表单验证</strong></li>
+<li><strong>通过ajax和后端语言实现数据交互</strong></li>
+</ul>
+<h2 id="组成"><a href="#组成" class="headerlink" title="组成:"></a><strong>组成:</strong></h2><ol>
+<li><strong>ECMAScript</strong></li>
+<li><strong>BOM</strong></li>
+<li><strong>DOM</strong></li>
+</ol>
+<h2 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a><strong>ECMAScript</strong></h2><ul>
+<li><strong>概念：JavaScript的核心，描述了语言的基本语法和数据类</strong><br><strong>型，ECMAScript是一套标准，定义了一种语言（比如JS）</strong><br><strong>是什么样子。</strong></li>
+<li><strong>编码遵循ECMAScript标准</strong></li>
+</ul>
+<h2 id="BOM-浏览器对象模型"><a href="#BOM-浏览器对象模型" class="headerlink" title="BOM(浏览器对象模型)"></a><strong>BOM(浏览器对象模型)</strong></h2><ul>
+<li><strong>概念:BOM是用于描述这种对象不对象之间层次关系的模型，浏览器对象模型提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。 BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象。</strong></li>
+</ul>
+<h3 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM(文档对象模型)"></a>DOM(文档对象模型)</h3><ul>
+<li><strong>概念:W3C组织推荐的处理可扩展置标语言的标准编程接口。 DOM是以面向对象方式描述的文档模型。 DOM定义了表示和修改文档所需的对象、这些对象的行为和属性以及这些对象乊间的关系。可以把DOM认为是页面上数据和结构的一个树形表示，不过页面当然可能并不是以这种树的方式具体实现。</strong></li>
+</ul>
+<p>##<strong>javascript 使用方法</strong></p>
+<ul>
+<li><p><strong>html内嵌javascript代码</strong></p>
+<blockquote>
+<p><strong><code>&lt;script type=&quot;text/javascript&quot;&gt; //JavaScript 语句&lt;/script &gt;</code></strong></p>
+</blockquote>
+</li>
+<li><p><strong>外部JS文件</strong></p>
+<blockquote>
+<p><strong><code>&lt;script src=&quot;hello.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;</code></strong></p>
+</blockquote>
+</li>
+<li><p><strong>行内编写方式</strong></p>
+<blockquote>
+<p><strong><code>&lt;input name=&quot;btn&quot; type=&quot;button&quot; value=&quot;弹出消息框&quot;onclick=&quot;javascript:alert(&#39;欢迎你&#39;);&quot;/&gt;</code></strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a><strong>事件监听</strong></h2><ul>
+<li><strong>onload事件:是在页面或图片加载完成后立即执行的事件获取元素</strong></li>
+<li><strong>getElementById()：获取指定 ID 的第一个对象引用</strong></li>
+<li><strong>getElementsByName()：通过NAME属性获Document中指定名称对象的集合</strong></li>
+<li><strong>getElementsByTagName()：使用指定的标签名返回所有的元</strong><br><strong>素，这些元素是您在使用此方法时所处的元素的后代</strong></li>
+</ul>
+<h2 id="JavaScript-的调试工具及调试方法"><a href="#JavaScript-的调试工具及调试方法" class="headerlink" title="JavaScript 的调试工具及调试方法"></a><strong>JavaScript 的调试工具及调试方法</strong></h2><ul>
+<li><strong>调试工具:Firebug工具</strong></li>
+<li><strong>安装：火狐浏览器 - 选顷 – 附加组件 – 搜索Firebug添加即可。安装完成，按键盘f12即可打开Firebug</strong></li>
+<li><strong>Chrome和ie自带调试工具，不需要安装</strong></li>
+<li><strong>调试方法</strong><ol>
+<li><strong>使用Firebug的HTML 、 CSS、脚本顷查看页面的html标签、 CSS文件、 JS文件。</strong></li>
+<li><strong>Firebug控制台:</strong><ol>
+<li><strong>如果页面报错，会在控制台显示：包括错误原因和行号</strong></li>
+<li><strong>控制台最下边的输入框可以输入js代码，提交浏览器执行</strong></li>
+</ol>
+</li>
+<li><strong>利用js的console方法，可以在控制台输出js代码中的值、对象、 DOM等，以方便查看对象的结构</strong><br><strong>常用方法：console.log() console.dir()</strong></li>
+</ol>
+</li>
+</ul>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年07月31日 10:57</p>
+        <p>原始链接： <a class="post-url" href="/2017/04/10/javascript 基础/" title="JavaScript基础引入">http://yoursite.com/2017/04/10/javascript 基础/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/img/logozw.jpg" alt="周斌">
+                周斌
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/10/javascript 基础/&title=《JavaScript基础引入》 — coco阿斌&pic=http://yoursite.comimg/logozw.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/10/javascript 基础/&title=《JavaScript基础引入》 — coco阿斌&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/10/javascript 基础/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript基础引入》 — coco阿斌&url=http://yoursite.com/2017/04/10/javascript 基础/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/10/javascript 基础/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/10/javascript 基础/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/前端基础/" class="color5">前端基础</a>
+      
+    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#javascript基础"><span class="post-toc-text">javascript基础</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简介"><span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#应用场景"><span class="post-toc-text">应用场景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#组成"><span class="post-toc-text">组成:</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ECMAScript"><span class="post-toc-text">ECMAScript</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#BOM-浏览器对象模型"><span class="post-toc-text">BOM(浏览器对象模型)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM-文档对象模型"><span class="post-toc-text">DOM(文档对象模型)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#事件监听"><span class="post-toc-text">事件监听</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript-的调试工具及调试方法"><span class="post-toc-text">JavaScript 的调试工具及调试方法</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/04/10/jQuery 中的遍历/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          JQuery中的遍历
+        
+      </span>
+    </a>
+  
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="javascript 基础" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cythQ8OuD';
+        var conf = '11d33834dab0216e0550f122951c3687';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 周斌<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/学习/">学习</a><a class="category-link" href="/categories/学习/动态网页编程/">动态网页编程</a><a class="category-link" href="/categories/学习/励志故事/">励志故事</a><a class="category-link" href="/categories/学习/情感/">情感</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归类</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/404.html">
+                    <i class="fa fa-user"></i><span>公益</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/个性/" style="font-size: 10px;">个性</a> <a href="/tags/前端基础/" style="font-size: 20px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 20px;">动态网页编程</a> <a href="/tags/励志/" style="font-size: 13.33px;">励志</a> <a href="/tags/奋斗/" style="font-size: 13.33px;">奋斗</a> <a href="/tags/故事/" style="font-size: 16.67px;">故事</a> <a href="/tags/签名/" style="font-size: 10px;">签名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>
