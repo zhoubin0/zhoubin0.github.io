@@ -413,7 +413,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/bei.jpg") center #000;
+  background: url("../images/bei.jpg") center #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -574,6 +574,9 @@ body {
   padding: 10px 0;
   color: #666;
   letter-spacing: 5px;
+}
+#header-description h3 {
+  color: #fff;
 }
 .header-nav {
   cursor: pointer;
@@ -973,6 +976,10 @@ body {
 .article-entry h3 {
   padding-bottom: 5px;
   border-bottom: 1px solid #ddd;
+}
+.article-entry h3 {
+  color: #fff;
+  font-weight: 900;
 }
 .article-entry h1,
 .article-entry h2,

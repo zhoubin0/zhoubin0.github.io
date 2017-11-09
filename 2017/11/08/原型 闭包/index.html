@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascript  ajax的总结 | coco阿斌</title>
+  <title>javascript 原型 闭包 | coco阿斌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="ZhouBin,ZhouBin's Blog" />
   
-  <meta name="description" content="ajax 定义: ajax 就是前端和后端进行交流的一门js技术 作用:  实现不刷新页面的情况下,更新局部页面   分类(ajax 是前端和后端交流的技术,)  同域请求:  浏览器有同源策略(协议,域名,端口,)一致,就是同源, 为什么有同源策略? 为了用户安全;   常规的ajax:   初始化一个ajax对象 var xhr= new XMLHttpRequest();      创建连接">
+  <meta name="description" content="作用域、原型链、闭包等概念理解1、执行环境及作用域  (1).执行环境： 定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。  全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，因">
 <meta name="keywords" content="JavaScript,前端基础,动态网页编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript  ajax的总结">
-<meta property="og:url" content="http://yoursite.com/2017/04/13/ajax 总结/index.html">
+<meta property="og:title" content="javascript 原型 闭包">
+<meta property="og:url" content="http://yoursite.com/2017/11/08/原型 闭包/index.html">
 <meta property="og:site_name" content="coco阿斌">
-<meta property="og:description" content="ajax 定义: ajax 就是前端和后端进行交流的一门js技术 作用:  实现不刷新页面的情况下,更新局部页面   分类(ajax 是前端和后端交流的技术,)  同域请求:  浏览器有同源策略(协议,域名,端口,)一致,就是同源, 为什么有同源策略? 为了用户安全;   常规的ajax:   初始化一个ajax对象 var xhr= new XMLHttpRequest();      创建连接">
-<meta property="og:updated_time" content="2017-10-26T09:37:53.126Z">
+<meta property="og:description" content="作用域、原型链、闭包等概念理解1、执行环境及作用域  (1).执行环境： 定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。  全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，因">
+<meta property="og:updated_time" content="2017-11-08T06:22:45.541Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript  ajax的总结">
-<meta name="twitter:description" content="ajax 定义: ajax 就是前端和后端进行交流的一门js技术 作用:  实现不刷新页面的情况下,更新局部页面   分类(ajax 是前端和后端交流的技术,)  同域请求:  浏览器有同源策略(协议,域名,端口,)一致,就是同源, 为什么有同源策略? 为了用户安全;   常规的ajax:   初始化一个ajax对象 var xhr= new XMLHttpRequest();      创建连接">
+<meta name="twitter:title" content="javascript 原型 闭包">
+<meta name="twitter:description" content="作用域、原型链、闭包等概念理解1、执行环境及作用域  (1).执行环境： 定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。  全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，因">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -112,14 +112,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-ajax 总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-原型 闭包" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      javascript  ajax的总结
+      javascript 原型 闭包
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -134,7 +134,7 @@
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2017-04-13
+          <i class="fa fa-calendar"></i>  2017-11-08
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -150,99 +150,48 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h1><ul>
-<li>定义: ajax 就是前端和后端进行交流的一门js技术</li>
-<li><p>作用:</p>
-<ul>
-<li>实现不刷新页面的情况下,更新局部页面</li>
-</ul>
-</li>
-<li><p>分类(ajax 是前端和后端交流的技术,)</p>
-<ul>
-<li><p>同域请求:</p>
-<ul>
-<li>浏览器有同源策略(协议,域名,端口,)一致,就是同源,</li>
-<li>为什么有同源策略?<ul>
-<li>为了用户安全;</li>
-</ul>
-</li>
-<li><p>常规的ajax:</p>
-<ul>
-<li><ol>
-<li>初始化一个ajax对象<blockquote>
-<p>var xhr= new XMLHttpRequest();</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><ol>
-<li>创建连接<blockquote>
-<p>xhr.open(“请求方式”,”请求地址”,”同步还是异步”);</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><ol>
-<li>发送数据<blockquote>
-<p>xhr.send();</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><ol>
-<li>等待并拿到后台给我们的数据<ul>
-<li>等待并且拿到后台给咱们的数据;</li>
-<li>通过检测xhr(ajax对象)的状态 来获取数据</li>
-<li>xhr.readyState=4 ,说明了后台已经开始返回数据,</li>
-<li>xhr.status==200  说明了 所有数据都传输完毕了</li>
-<li>xhr.responseText 通过这个方法拿到数据<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">xhr.onreadystatechange=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(xhr.readyState==<span class="number">4</span>  &amp;&amp; xhr.status==<span class="number">200</span> )&#123;</div><div class="line">                <span class="keyword">var</span> data= xhr.responseText</div><div class="line"></div><div class="line">                       <span class="comment">//根据需求 操作数据</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p>请求方式 :</p>
-<ul>
-<li>get 请求:<ul>
-<li>数据都在地址栏中</li>
-<li>数据大小有限制</li>
-<li>传输速度快</li>
-<li>不安全</li>
-</ul>
-</li>
-<li>post 请求:<ul>
-<li>数据在内部发送,相对安全</li>
-<li>传输速度相对较慢</li>
-<li>数据大小理论无限制</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code>- 跨域请求(相对于你给你家人以外的人通电话);
-    - 什么是跨域?
-        &gt; 协议,域名,端口,有一项和你当前的不一致,就是跨域;
+            <h1 id="作用域、原型链、闭包等概念理解"><a href="#作用域、原型链、闭包等概念理解" class="headerlink" title="作用域、原型链、闭包等概念理解"></a><a href="http://www.cnblogs.com/n-q-y/p/4491005.html" target="_blank" rel="external">作用域、原型链、闭包等概念理解</a></h1><p>1、执行环境及作用域 </p>
+<p>(1).执行环境：</p>
+<pre><code>定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。
 
-    - 如何实现跨域:
-          1. 动态创建一个带有 src 属性的标签, img, iframe , script(推荐使用)
-          &gt; var script=document.createElement(&quot;script&quot;);
-          2. 让他的src属性等于你要请求的地址
-          &gt; script.src=你要请求的地址?callback=你要的方法
-          3. 把你创建的标签放到文档中;
-          &gt; document.body.appendchild(script);
-          4. 如果你需要对返回的数据操作,你得给他传递一个callback参数,callback=你要的方法
-            - 页面上必须有一个 你要的方法,在这个方法中咱们就可以操作数据;
-</code></pre>
+全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，因此所有全局变量和函数都是作为window对象的属性和方法创建的。每个函数都有自己的执行环境，当执行流进入一个函数的时候，函数的环境会被推入一个函数栈中，而在函数执行完毕后执行环境出栈并被销毁，保存在其中的所有变量和函数定义随之销毁，控制权返回到之前的执行环境中，全局的执行环境在应用程序退出（浏览器关闭）才会被销毁。
+</code></pre><p>(2).作用域：</p>
+<p>作用域就是变量和函数的可访问范围，控制着变量和函数的可见性与生命周期，在JavaScript中变量的作用域有全局作用域和局部作用域。</p>
+<p>全局作用域：任何地方都可以定义拥有全局作用域的变量。</p>
+<p>a.没有用var声明的变量（除去函数的参数）都具有全局作用域，成为全局   变量，所以声明局部变量必须要用var。</p>
+<p>b.window的所有属性都具有全局作用域</p>
+<p>c.最外层函数体外声明的变量也具有全局作用域 </p>
+<p>局部作用域:局部变量的优先级高于全局变量。</p>
+<p>a.函数体内用var声明的变量具有局部作用域，成为局部变量</p>
+<p>b.函数的参数也具有局部作用域 </p>
+<p>JavaScript是函数作用域（function scope），没有块级作用域。无论函数体内的变量在什么地方声明，对整个函数都是可见的，即JavaScript函数里声明的所有变量都被提前到函数体的顶部，只是提前变量声明，变量的赋值还是保留在原位置</p>
+<p>(3).作用域链：</p>
+<p>   JavaScript的变量都是对象的属性，而该对象可能又是其它对象的属性，而所有的对象都是全局对象的属性，所以这些对象的关系可以看作是一条链，由于每个对象都有一个作用域，所以形成了一个作用域链。链头就是变量所处的对象，链尾就是全局对象。</p>
+<p>当代码在一个环境中执行时，会创建变量对象的一个作用域链来保证对执行环境有权访问的变量和函数的有序访问。</p>
+<p>2、原型链、继承</p>
+<p>（1）理解原型对象</p>
+<p>1).只要创建了一个新函数，就会为该函数创建一个prototype属性，这个属性指向函数的原型对象；</p>
+<p>2).所有原型对象都会自动获得一个constructor（构造函数）属性，这个属性包含一个指向prototype属性所在函数的指针；</p>
+<p>3).当调用构造函数创建一个新实例后，该实例的内部将包含一个指针（内部属性），指向构造函数的原型对象。</p>
+<p>（2）原型链</p>
+<pre><code>综上所述，假如我们让原型对象等于另一个类型的实例，则此时的原型对象将包含一个指向另一个原型的实例，相应地，另一个原型中也包含着一个指向另一个构造函数的指针。假如另一个原型又是另一个类型的实例，那么上述关系依然成立，如此层层递进，就构成了实例与原型的链条，这就是原型链。
+</code></pre><p>【注】：所有引用类型默认都继承了Object，而这个继承也是通过原型链实现的。所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object.prototype。这也正是所有自定义类型都会继承toString()，valueOf()等默认方法的根本原因。</p>
+<p>（3）继承</p>
+<p>1).通过原型链实现。不能使用对象字面量创建原型方法，因为这样会重写原型链。</p>
+<p>缺点：最主要的问题是包含引用类型值的原型；二是在创建子类型的实例时，不能向超类型的构造函数中传递参数。</p>
+<p>2)借用构造函数。在子类型构造函数的内部调用超类型构造函数。使用apply()和call()方法，可以向超类型的构造函数中传递参数。apply()和call()的作用一样，只是专递的参数形式不同，apply()的参数是以数组的形式传递，call()中是展开的形式。</p>
+<p>缺点：函数复用无从谈起，而且在超类型的原型中定义的方法，对子类型而言是不可见的。</p>
+<p>3).组合继承（原型链+借用构造函数）。避免了1)、2）的缺陷，融合了他们的优点，成为javascript最常用的继承模式，而且，instanceof和isPrototypeOf()也能够用于识别基于组合继承创建的对象。</p>
+<p>3、闭包</p>
+<p>(1).概念：有权访问另一个函数作用域中的变量的函数。简单理解为“定义在一个函数内部的函数”。</p>
+<p>(2).好处：保护函数内的变量安全,加强了封装性；在内存中维持一个变量（缓存）；匿名自执行函数；模拟面向对象编程。</p>
+<p>(3).应用场景：使用闭包代替全局变量；函数外或在其他函数中访问某一函数内部的参数；包装相关功能；为节点循环绑定click事件，在事件函数中使用当次循环的值或节点，而不是最后一次循环的值或节点；</p>
+<p>(4).缺点：常驻内存，会增大内存使用量，使用不当很容易造成内存泄露，更重要的是，对闭包的使用不当会造成无效内存的产生。</p>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年10月26日 17:37</p>
-        <p>原始链接： <a class="post-url" href="/2017/04/13/ajax 总结/" title="javascript  ajax的总结">http://yoursite.com/2017/04/13/ajax 总结/</a></p>
+        <p>最后更新： 2017年11月08日 14:22</p>
+        <p>原始链接： <a class="post-url" href="/2017/11/08/原型 闭包/" title="javascript 原型 闭包">http://yoursite.com/2017/11/08/原型 闭包/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/img/logozw.jpg" alt="周斌">
@@ -264,7 +213,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/13/ajax 总结/&title=《javascript  ajax的总结》 — coco阿斌&pic=http://yoursite.comimg/logozw.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/11/08/原型 闭包/&title=《javascript 原型 闭包》 — coco阿斌&pic=http://yoursite.comimg/logozw.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -274,22 +223,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/13/ajax 总结/&title=《javascript  ajax的总结》 — coco阿斌&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/11/08/原型 闭包/&title=《javascript 原型 闭包》 — coco阿斌&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/13/ajax 总结/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/11/08/原型 闭包/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javascript  ajax的总结》 — coco阿斌&url=http://yoursite.com/2017/04/13/ajax 总结/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javascript 原型 闭包》 — coco阿斌&url=http://yoursite.com/2017/11/08/原型 闭包/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/13/ajax 总结/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/11/08/原型 闭包/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -299,7 +248,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/13/ajax 总结/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/11/08/原型 闭包/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -328,26 +277,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ajax"><span class="post-toc-text">ajax</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#作用域、原型链、闭包等概念理解"><span class="post-toc-text">作用域、原型链、闭包等概念理解</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2017/04/15/Ajax 常问问题/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          javascript  ajax的常见问题
-        
-      </span>
-    </a>
   
-  
-    <a href="/2017/04/10/javascript  运算/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">javascript  运算</span>
+    <a href="/2017/10/30/嘘……听那声枪响/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">嘘……听那声枪响</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -356,7 +295,7 @@
 
 
     
-        <div id="SOHUCS" sid="ajax 总结" ></div>
+        <div id="SOHUCS" sid="原型 闭包" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cythQ8OuD';
