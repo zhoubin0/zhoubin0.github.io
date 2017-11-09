@@ -1,0 +1,565 @@
+
+
+/*   大 轮播图  开始 */
+
+.banner_wrap {
+    width: 100%;
+    overflow: hidden;
+
+
+}
+.banner_dingwei{
+    width: 0px;
+    height: 0px;
+}
+.banner_dingwei .banner_left {
+
+    width: 40px;
+    height: 55px;
+    position: absolute;
+    top: 400px;
+    left: 150px;
+    background: url("../img/banner_l.png") no-repeat;
+    cursor: pointer;
+}
+
+.banner_dingwei .banner_right {
+    background: url("../img/banner_r.png") no-repeat;
+    width: 40px;
+    height: 55px;
+    position: absolute;
+    top: 400px;
+    right: 150px;
+    cursor: pointer;
+
+}
+
+.banner_wrap ul {
+    width: 6145px;
+    height: 550px;
+}
+.banner_wrap ul .nav_li {
+    float: left;
+    width: 1536px;
+    height: 550px;
+}
+.banner_dingwei  .banner_bottom{
+    height: 32px;
+    position: absolute;
+    top: 685px;
+    left:520px;
+    margin: 0 auto;
+}
+.banner_dingwei span{
+    display: block;
+    width: 120px;
+    height: 30px;
+    color: white;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    background: #000;
+    float: left;
+    opacity: 0.8;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.banner_dingwei .now{
+    background-color: red;
+}
+.banner_wrap ul .nav_li:nth-child(1) {
+
+    background: url("../img/kxj_98.jpg") no-repeat top center;
+}
+
+.banner_wrap ul .nav_li:nth-child(2) {
+    background: url("../img/qzsx_817.jpg") no-repeat top center;
+}
+
+.banner_wrap ul .nav_li:nth-child(3) {
+    background: url("../img/xhc_98.jpg") no-repeat top center;
+}
+.banner_wrap ul .nav_li:nth-child(4) {
+    background: url("../img/lq_912.jpg") no-repeat top center;
+}
+/*大轮播图 结束*/
+
+/*展示 图 开始*/
+.chanpin_wrap{
+    width: 100%;
+    background-color: #F3F3F3;
+    padding-top: 30px;
+}
+.chanpin_top ul{
+    height: 380px;
+    width: 100%;
+}
+.chanpin_top ul li{
+    width: 380px;
+    height: 380px;
+    float: left;
+    margin-right: 16px ;
+    position: relative;
+}
+.chanpin_top ul li .yincang {
+    background-color: black;
+    width: 385px;
+    height: 311px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+  opacity: 0.5;
+    display: none;
+
+
+}
+.chanpin_top ul li:hover .yincang{
+display: block;
+}
+.chanpin_top ul li:hover .dingzhi{
+    display: block;
+}
+.chanpin_top ul li  .dingzhi{
+    width: 102px;
+    height: 30px;
+    border: 1px solid silver;
+    margin-left: 130px;
+    margin-top: 150px;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    top:0px;
+    left:0px;
+    display: none;
+}
+.chanpin_top ul li  .beijing{
+    width: 0px;
+    height: 32px;
+    transition: width 0.3s;
+    background-color: white;
+}
+.chanpin_top ul li .dingzhi  :hover{
+    width: 105px;
+}
+.chanpin_top ul li  .dingzhi a:hover{
+    color: black;
+}
+.chanpin_top ul li  .dingzhi a{
+    color: white;
+    display: block;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    opacity: 1;
+}
+.chanpin_top ul li h3{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.chanpin_botoom ul{
+    width: 100%;
+    height: 550px;
+
+}
+.chanpin_botoom ul li{
+    width: 580px;
+    height: 500px;
+    float: left;
+    margin-right: 15px;
+    position: relative;
+}
+.chanpin_botoom ul li .yincang {
+    background-color: black;
+    width: 580px;
+    height: 400px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    opacity: 0.3;
+    display: none;
+
+
+}
+.chanpin_botoom ul li:hover .yincang{
+    display: block;
+}
+.chanpin_botoom ul li:hover .dingzhi{
+    display: block;
+}
+.chanpin_botoom ul li  .dingzhi{
+    width: 102px;
+    height: 30px;
+    border: 1px solid silver;
+    margin-left: 230px;
+    margin-top: 190px;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    top:0px;
+    left:0px;
+    display: none;
+}
+.chanpin_botoom ul li  .beijing{
+    width: 0px;
+    height: 32px;
+    transition: width 0.3s;
+    background-color: white;
+}
+.chanpin_botoom ul li .dingzhi  :hover{
+    width: 105px;
+}
+.chanpin_botoom ul li  .dingzhi a:hover{
+    color: black;
+}
+.chanpin_botoom ul li  .dingzhi a{
+    color: white;
+    display: block;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+
+}
+.chanpin_botoom ul li h2{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.chanpin_botoom ul li span{
+    display: block;
+    margin-left: 120px;
+    margin-top: 10px;
+}
+.chanpin_botoom ul li span a{
+    display: block;
+    font-size: 15px;
+    width: 90px;
+    float: left;
+
+    text-align: center;
+    border-right: 1px #F1F2F6;
+}
+.chanpin_botoom ul li span a:hover{
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+    text-decoration: underline;
+    border-radius: 10px;
+    background-color: black;
+    transition: all 1s;
+}
+/*展示 图 结束*/
+
+/*  小 轮播图  开始  */
+.content_wrap{
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+.content_box p{
+    text-align: center;
+    font-size: 28px;
+    padding-top: 45px;
+    padding-bottom: 15px; ;
+}
+.content_box h1{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 45px;
+}
+.content_box .content_left{
+    width: 580px;
+    height: 600px;
+    float: left;
+    overflow: hidden;
+}
+.content_box ul{
+    width: 1750px;
+    height:500px ;
+}
+.content_box ul li{
+    float: left;
+    width: 580px;
+    height: 500px;
+}
+.content_box ul li h2{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.content_box ul li p{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top:10px;
+}
+.content_box  .goumai{
+    width: 115px;
+height: 30px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid black;
+
+    overflow: hidden;
+
+
+}
+.content_box .goumai_box{
+    width: 0px;
+    height:32px ;
+    background-color: black;
+    transition: width 1.5s;
+    float: left;
+
+
+}
+.content_box  .goumai  a{
+    height: 32px;
+    width: 115px;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0px;
+    text-align: center;
+    line-height: 30px;
+    color: red;
+
+}
+
+.content_box  .goumai :hover{
+    width: 115px;
+/*transform: skewY(10deg);*/
+    /*transition: background 1s;*/
+
+
+}
+
+    /*.content_box  .goumai  :hover{*/
+    /*color: white;*/
+    /*background-color: black;*/
+    /*;*/
+    /*transition: background 1s;*/
+/*}*/
+
+.content_box .content_right{
+    width: 583px;
+
+    height: 600px;
+    float:right;
+    overflow: hidden;
+}
+
+
+.content_wrap .point_wrap {
+    width: 60px;
+    height: 12px;
+    position: absolute;
+    top:567px;
+    left: 410px;
+
+}
+.content_wrap .point_wrap .point{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 50%;
+opacity: 0.8;
+    background-color: #272727;
+    float: left;
+    margin-right: 8px;
+    cursor: pointer;
+
+}
+.content_wrap .point1_wrap{
+    width: 60px;
+    height: 12px;
+    position: absolute;
+    top:567px;
+    right: 410px;
+}
+.content_wrap .point1_wrap .point1{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 50%;
+    opacity: 0.8;
+    background-color: #272727;
+    float: left;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.content_wrap .point_wrap .now{
+    background-color: #eeeeee;
+}
+.content_wrap .point1_wrap .now{
+    background-color: #eeeeee;
+}
+
+/* 小轮播图 结束*/
+
+
+
+/* 主要产品 开始 */
+
+.yifu_wrap{
+    width: 100%;
+padding-bottom: 100px;
+    padding-top: 50px;
+    background-color: #f1f2f6;
+}
+.yifu_box .xuangou  {
+    width: 400px;
+    height: 35px;
+    margin: 0 auto;
+    margin-top:30px;
+    border: 1px solid black;
+
+
+
+
+}
+.yifu_box .xuangou_box{
+    width: 0px;
+    height:37px ;
+    background-color: #D6211A;
+    transition: width .5s;
+    float: left;
+
+
+}
+.yifu_box  .xuangou   a{
+    height: 37px;
+    width: 400px;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0px;
+    text-align: center;
+    line-height: 30px;
+    color: #c0c0c0;
+}
+.yifu_box  .xuangou   a:hover{
+    color: white;
+}
+.yifu_box .xuangou  :hover{
+    width: 400px;
+    /*transform: skewY(10deg);*/
+    /*transition: background 1s;*/
+
+
+}
+
+
+
+.yifu_wrap .yifu_box ul li{
+    float: left;
+
+    background-color: white;
+    margin-right: 8px;
+    margin-bottom: 15px;
+    height: 415px;
+    width: 289px; overflow: hidden;
+    transition: all .5s;
+}
+.yifu_wrap .yifu_box ul li:hover{
+    transform: scale(1.05,1.05);
+    overflow: visible;
+    box-shadow:0px 60px 99px 1px rgba(96,96,96,0.4);
+    transition: all .8s;
+
+}
+.yifu_wrap .yifu_box ul li:hover .chuxian{
+    height: 130px;
+    transition: all .8s;
+
+}
+.yifu_wrap .yifu_box ul li .chuxian{
+    height:70px;
+    width: 289px;
+    background-color: white;
+overflow: hidden;
+
+    position: relative;
+    z-index: 1000;
+}
+.yifu_box ul li h5 {
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.yifu_box ul li p{
+
+
+    line-height: 25px;
+    font-size: 15px;
+}
+.yifu_box  .goumai{
+    width: 115px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid black;
+
+    overflow: hidden;
+
+
+}
+.yifu_box .goumai_box{
+    width: 0px;
+    height:32px ;
+    background-color: black;
+    transition: width .5s;
+    float: left;
+
+
+}
+.yifu_box  .goumai  a{
+    height: 32px;
+    width: 115px;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0px;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+}
+.yifu_box  .goumai  a:hover{
+    color: red;
+}
+
+.yifu_box  .goumai :hover{
+    width: 115px;
+    /*transform: skewY(10deg);*/
+    /*transition: background 1s;*/
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

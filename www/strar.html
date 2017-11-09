@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .box_wrap {
+            width: 100%;
+            height: 100px;
+            background: url("./img/dongtu7.gif");
+
+        }
+
+        .box_center {
+            width: 100%;
+            height: 658px;
+            background: url("./img/dongtu6.gif");
+
+        }
+
+        .box #content {
+            text-align: center;
+            color: white;
+            font-size: 65px;
+            line-height: 180px;
+            padding-top: 80px;
+            font-family: "楷体";
+        }
+
+        .box h2 {
+            font-size: 100px;
+            color: sandybrown;
+            font-family: "楷体";
+            position: absolute;
+            top: 0px;
+        }
+        .jianjie {
+            width: 300px;
+          position: absolute;
+            top:500px;
+            margin-left: 50px;
+        }
+        .jianjie .xinxi{
+            font-family: "楷体";
+           margin-left: 50px;
+            color: red;
+            font-size: 30px;
+            line-height: 60px;
+            font-weight: 500;
+        }
+        .jianjie .xingming :hover{
+            transition: a;
+        }
+        @keyframes a{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+        h2 {
+            color: white;
+        }
+
+        #tex {
+            color: white;
+            font-family: "楷体";
+            position: absolute;
+            right: 30px;
+            top: 50px;
+            font-size: 35px;
+
+        }
+    </style>
+</head>
+<body onload="time()">
+<div class="box_wrap ">
+    <div class="box  w">
+        <h1 id="content">
+            <p style="color: red">尊敬的各位领导</p>
+            <p style="color: darkblue">尊敬的老师</p>
+            <p>敬爱的同事们</p>
+
+        </h1>
+        <a href="http://localhost:63342/www/zhoubin/index.html?_ijt=agkl9ecat2faf0d0bmujheqibo" target="_blank" rel="external">
+            <h2>我 <br>的<br>项<br>目</h2>
+        </a>
+    </div>
+    <div class="jianjie">
+    <p class="xinxi xingming" style="color: #3498DB"> 答辩人：周斌 </p>
+    <br>
+    <p class="xinxi xiangmu" style="color:white"> 项目名称：<br> 安踏官方商城 </p>
+    </div>
+</div>
+<div class="box_center"></div>
+<div class="box_bottom"></div>
+
+
+<h3 id="tex">
+
+</h3>
+<script type="text/javascript">
+
+    // 定时器
+    var content = document.getElementById("content");
+
+
+    setTimeout(function () {
+
+        content.innerHTML = "大 &nbsp;&nbsp;&nbsp;&nbsp;家&nbsp;&nbsp;&nbsp;&nbsp; 好"
+    }, 10000);
+
+
+    // 时间
+    var tex = document.getElementById("tex");
+
+    function time() {
+        var nowtime = new Date;
+
+        var y = nowtime.getFullYear();
+        var M = nowtime.getMonth() + 1;
+        var d = nowtime.getDate();
+        var w = nowtime.getDay();
+        var h = nowtime.getHours();
+        var m = nowtime.getMinutes();
+        var s = nowtime.getSeconds();
+        tex.innerHTML = y + "年" + M + "月" + d + "日" + h + ":" + m + ":" + s + "星期" + w;
+        t = setTimeout("time()", 1000)
+
+    }
+
+
+</script>
+</body>
+
+</html>

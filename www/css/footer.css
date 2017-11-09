@@ -1,0 +1,128 @@
+.footer_wrap {
+    width: 100%;
+
+    border-top: 2px solid #c0c0c0;
+}
+
+.footer_wrap .footer_top {
+    height: 280px;
+
+    padding-top: 35px;
+}
+.footer_wrap .footer_top .footer_top_left{
+    width: 788px;
+    height: 225px;
+    float: left;
+
+    border-right:1px  solid #c0c0c0;
+}
+.footer_wrap .footer_top ul li{
+    float: left;
+    width: 72px;
+    margin-right: 110px;
+    font-size: 16px;
+    margin-left: 15px;
+}
+.footer_wrap .footer_top ul li h3{
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+.footer_wrap .footer_top ul li a{
+    font-size: 12px;
+    color:#272727;
+    line-height: 30px;
+    float: left;
+
+}
+.footer_wrap .footer_top ul li a:hover{
+    color: #D6211A;
+    margin-left: 5px;
+    transition: all  1s;
+}
+ .footer_top .footer_top_right{
+    float: left;
+    margin-left: 80px;
+}
+.footer_top .footer_top_right h2{
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.footer_top .footer_top_right p{
+    width: 240px;
+    height: 30px;
+    background: url("../img/service-icon.png")no-repeat -13px -24px ;
+    margin-bottom: 10px;
+}
+.footer_top .footer_top_right .zaixian{
+width: 115px;
+    height: 22px;
+    border: 1px solid #F1F2F6;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.footer_top .footer_top_right .zaixian:hover .ren{
+    background: url("../img/service-icon.png")-11px -151px;
+}
+.footer_top .footer_top_right .zaixian:hover{
+    background-color: red;
+    color: white;
+}
+.footer_top .footer_top_right .zaixian .ren{
+    width: 35px;
+    height: 100%;
+    background-color: pink;
+    float: left;
+    background: url("../img/service-icon.png")no-repeat -11px -183px;
+}
+.footer_top .footer_top_right .zaixian h6{
+    float: left;
+    font-weight: 100;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.footer_bottom_box{
+ width: 100%;
+    background-color: black;
+}
+.footer_bottom{
+    height: 65px;
+}
+.footer_bottom .footer_bottom_left{
+    width: 600px;
+    height: 100%;
+    color: white;
+    float: left;
+}
+.footer_bottom .footer_bottom_left img{
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.footer_bottom .footer_bottom_left p{
+    float: left;
+    font-size: 12px;
+line-height: 65px;
+    margin-right: 20px;
+}
+
+.footer_bottom .footer_bottom_right{
+    width: 200px;
+    height: 100%;
+    margin-left: 100px;
+float: right;
+}
+.footer_bottom .footer_bottom_right  p{
+    margin-right: 20px; color: white;
+    float: left;
+    line-height: 65px;
+    text-align: right;
+    font-size: 12px;
+}
+.footer_bottom .footer_bottom_right p:hover{
+    color: #D6211A;
+}

@@ -1,0 +1,151 @@
+.zhuce_wrap{
+    width: 100%;
+
+
+    background-color: #f1f2f6;
+}
+
+.kefu{
+    width: 85px;
+    height: 170px;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    background-color: red;
+}
+.kefu .kefu_top{
+    width: 85px;
+    height: 85px;
+    background-color: orange;
+    cursor: pointer;
+}
+.kefu .kefu_top .logo{
+    width: 30px;
+    height: 25px;
+    margin-left: 25px;
+    background: url("../img/index-icon.png")0px -229px;
+}
+.kefu .kefu_top:hover{
+    background-color: #d43f3a;
+}
+.kefu .kefu_top .ren{
+    width: 30px;
+    height: 25px;
+    margin-left: 25px;
+    background: url("../img/service-icon.png")-20px -150px;
+}
+.kefu .kefu_top p{
+    font-size: 14px;
+    color: white;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.kefu .kefu_bottom{
+    width: 85px;
+    height: 85px;
+    background-color: #D6211A;
+    cursor: pointer;
+}
+.kefu .kefu_bottom:hover{
+    background-color: crimson;
+}
+.kefu .kefu_bottom .dianhua{
+    width: 30px;
+    height: 25px;
+    margin-left: 25px;
+    padding-top: 30px;
+    background: url("../img/index-icon.png")0px -7px;
+}
+.kefu .kefu_bottom h3{
+    margin-left: 15px;
+}
+.kefu .shuzi{
+    width: 150px;
+    height: 85px;
+    background-color: crimson;
+    position: absolute;
+    bottom: 0px;
+    right: 85px;
+    display: none;
+}
+.kefu .shuzi p{
+    color: white;
+font-size: 16px;
+    font-weight: 700;
+    line-height: 85px;
+    text-align: center;
+}
+.zhuce_wrap .zhuce_box{
+    width: 800px;
+    margin: 0 auto;
+
+}
+.zhuce_wrap .zhuce_box .zhuce_top{
+    height: 560px;
+    background-color: #fff;
+}
+.zhuce_box .zhuce_top .zhuce{
+
+
+    width: 400px;
+    height: 300px;
+    padding-top: 100px;
+    margin-left: 250px;
+
+}
+.zhuce_top .zhuce .img img{
+    margin-bottom: 20px;
+}
+.zhuce_top .zhuce .img h3{
+    color: #6B696F;
+}
+.zhuce_top .zhuce .shurukuang{
+    margin-top: 20px;
+}
+.zhuce_top .zhuce .shurukuang input{
+    width: 320px;
+    height: 40px;
+    margin-bottom: 15px;
+    outline-style: none;
+}
+.zhuce_top .zhuce .shurukuang p{
+
+    color: #D6211A;
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: none;
+}
+.zhuce_top .zhuce .shurukuang p img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.zhuce_top .zhuce .shurukuang .btn{
+    background-color: #D6211A;
+    color: white;
+    width: 320px;
+    outline-style: none;
+    border-style: none;
+    cursor: pointer;
+}
+.zhuce_box .zhuce_bottom{
+    width: 100%;
+    height: 125px;
+    padding-bottom: 63px;
+}
+.zhuce_box .zhuce_bottom  .wenzi {
+   margin-left: 190px;
+}
+.zhuce_box .zhuce_bottom  .wenzi .p1{
+    margin-left: 75px;
+}
+.zhuce_box .zhuce_bottom  .wenzi .p{
+    margin-left:-50px ;
+}
+.zhuce_box .zhuce_bottom  .wenzi p{
+    font-size: 13px;
+    margin-top: 3px;
+}
+.zhuce_box .zhuce_bottom .tupian{
+    margin-left: 220px;
+}

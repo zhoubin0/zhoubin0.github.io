@@ -1,0 +1,31 @@
+div,p,h1,h2,h3,h4,h5,h6,ul ,li,ol,dl,dd,dt,img,body{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: rgb(51,51,51);
+}
+ul li,ol li,dl dd dt{
+	list-style: none;
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+body{
+    font-size: 12px;
+    font-family:"微软雅黑", "华文楷体","楷体";
+}
+.w{
+	width: 1190px;
+	margin: 0 auto;
+}
