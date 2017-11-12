@@ -179,4 +179,21 @@ $goumai_content.mouseover(function () {
 
 
         function aa(a) {
-            if(a
+            if(a<10){
+                a="0"+a
+            }
+            return a
+        }
+
+        d.innerHTML=aa(dd);
+        h.innerHTML=aa(hh);
+        m.innerHTML=aa(mm);
+        s.innerHTML=aa(ss);
+
+    }
+    setInterval(gett,1)
+
+});
+
+
+
