@@ -7,7 +7,7 @@
 
 $(function () {
     /*  .load() 底层实现原理是ajax ,也就是说要想加载必须在服务模式下打开,否则,请用火狐浏览器 */
-    //$("#top").load("header.html");
+    $("#top").load("header.html");
     $("#footer").load("footer.html");
 
 //      大  轮播图 开始
@@ -179,4 +179,21 @@ $goumai_content.mouseover(function () {
 
 
         function aa(a) {
-            if(a
+            if(a<10){
+                a="0"+a
+            }
+            return a
+        }
+
+        d.innerHTML=aa(dd);
+        h.innerHTML=aa(hh);
+        m.innerHTML=aa(mm);
+        s.innerHTML=aa(ss);
+
+    }
+    setInterval(gett,1)
+
+});
+
+
+
