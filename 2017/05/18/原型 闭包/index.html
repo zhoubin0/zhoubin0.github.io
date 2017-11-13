@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascript 字符串操作 | coco阿斌</title>
+  <title>javascript 作用域 原型链 | coco阿斌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="ZhouBin,ZhouBin's Blog" />
   
-  <meta name="description" content="JS字符串操作 “字符串对象”是Javascript内置的字符块处理对象，用于定义及处理字符串。   声明字符串的两种方法:  var str1 = &amp;quot;string1&amp;quot; ; var str2 = new String(&amp;quot;string2&amp;quot;);   两种方式的差别:str1是一个字符串，类型是string ，而str2则是对象“ string2”的引用，类型是对">
+  <meta name="description" content="作用域、原型链、闭包等概念理解1、执行环境及作用域  (1).执行环境：  定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。  全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，">
 <meta name="keywords" content="JavaScript,前端基础,动态网页编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript 字符串操作">
-<meta property="og:url" content="http://yoursite.com/2017/04/28/JS字符串操作/index.html">
+<meta property="og:title" content="javascript 作用域 原型链">
+<meta property="og:url" content="http://yoursite.com/2017/05/18/原型 闭包/index.html">
 <meta property="og:site_name" content="coco阿斌">
-<meta property="og:description" content="JS字符串操作 “字符串对象”是Javascript内置的字符块处理对象，用于定义及处理字符串。   声明字符串的两种方法:  var str1 = &amp;quot;string1&amp;quot; ; var str2 = new String(&amp;quot;string2&amp;quot;);   两种方式的差别:str1是一个字符串，类型是string ，而str2则是对象“ string2”的引用，类型是对">
-<meta property="og:updated_time" content="2017-11-09T08:52:25.719Z">
+<meta property="og:description" content="作用域、原型链、闭包等概念理解1、执行环境及作用域  (1).执行环境：  定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。  全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，">
+<meta property="og:updated_time" content="2017-11-13T03:52:31.318Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript 字符串操作">
-<meta name="twitter:description" content="JS字符串操作 “字符串对象”是Javascript内置的字符块处理对象，用于定义及处理字符串。   声明字符串的两种方法:  var str1 = &amp;quot;string1&amp;quot; ; var str2 = new String(&amp;quot;string2&amp;quot;);   两种方式的差别:str1是一个字符串，类型是string ，而str2则是对象“ string2”的引用，类型是对">
+<meta name="twitter:title" content="javascript 作用域 原型链">
+<meta name="twitter:description" content="作用域、原型链、闭包等概念理解1、执行环境及作用域  (1).执行环境：  定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。  全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -122,14 +122,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-JS字符串操作" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-原型 闭包" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      javascript 字符串操作
+      javascript 作用域 原型链
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -144,7 +144,7 @@
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2017-04-28
+          <i class="fa fa-calendar"></i>  2017-05-18
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -160,102 +160,57 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="JS字符串操作"><a href="#JS字符串操作" class="headerlink" title="JS字符串操作"></a><strong>JS字符串操作</strong></h1><blockquote>
-<p><strong>“字符串对象”是Javascript内置的字符块处理对象，用于定义及处理字符串。</strong></p>
-</blockquote>
-<ol>
-<li><p><strong>声明字符串的两种方法:</strong></p>
+            <h1 id="作用域、原型链、闭包等概念理解"><a href="#作用域、原型链、闭包等概念理解" class="headerlink" title="作用域、原型链、闭包等概念理解"></a><a href="http://www.cnblogs.com/n-q-y/p/4491005.html" target="_blank" rel="external">作用域、原型链、闭包等概念理解</a></h1><p>1、执行环境及作用域 </p>
+<p>(1).执行环境：</p>
 <ul>
-<li><strong><code>var str1 = &quot;string1&quot; ;</code></strong></li>
-<li><strong><code>var str2 = new String(&quot;string2&quot;);</code></strong></li>
+<li><p>定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。</p>
+</li>
+<li><p>全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，因此所有全局变量和函数都是作为window对象的属性和方法创建的。每个函数都有自己的执行环境，当执行流进入一个函数的时候，函数的环境会被推入一个函数栈中，而在函数执行完毕后执行环境出栈并被销毁，保存在其中的所有变量和函数定义随之销毁，控制权返回到之前的执行环境中，全局的执行环境在应用程序退出（浏览器关闭）才会被销毁。</p>
+</li>
 </ul>
-<blockquote>
-<p><strong>两种方式的差别:str1是一个字符串，类型是string ，而str2则是对象“ string2”的引用，类型是对象。如果引用被修改，str2也会被修改</strong></p>
-</blockquote>
-</li>
-<li><p><strong>字符串操作方法</strong></p>
-<ol>
-<li><strong>charAt() 返回指定位置的字符</strong></li>
-<li><strong>charCodeAt() 返回指定位置的字符的Unicode编码</strong></li>
-<li><strong>search() 用于检索字符串中指定的子字符串</strong></li>
-<li><strong>replace() 查找匹配指定的字符串，然后用新字符串代替匹配的字符串</strong></li>
-<li><strong>concat() 将两个或多个字符的文本组合起来，返回一个新的字符串</strong></li>
-<li><strong>使用加号链接字符串。 newStr = “string1”+”string2”</strong></li>
-<li><strong>indexOf() 返回字符串中一个子串第一处出现的索引。如果没有匹配项，返回 -1</strong></li>
-<li><strong>lastIndexOf() 返回字符串中一个子串最后一处出现的索引，如果没有匹配项，返回 -1</strong></li>
-<li><strong>slice() 提取字符串的一部分，并返回一个新字符串。两个参数，第一个为起始位置，第二个为终止位置（留头不留尾），如果没有end，就取到末尾</strong></li>
-<li><strong>substring() 返回字符串的一个子串。传入参数是起始位置和结束位置。（留头不留尾），如果没有end，就取到末尾</strong></li>
-<li><strong>split() 通过将字符串划分成子串，将一个字符串做成一个字符串数组。</strong></li>
-<li><strong>Length 返回字符串的长度（其包含的字符的个数）</strong></li>
-<li><strong>toLowerCase() 将整个字符串转成小写字母</strong></li>
-<li><strong>toUpperCase() 将整个字符串转成大写字母</strong></li>
-<li><strong>转义字符 \</strong><br><strong>我们平时想输出一个双引号（“”）我们会这样写：</strong><br><strong><code>document.write(“””);</code></strong><br><strong>但是这样写是错诨的,所以我们需要用到转义字符：</strong><br><strong><code>document.write(“ \””);</code></strong></li>
-</ol>
-</li>
-</ol>
-<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a><strong>JSON</strong></h1><blockquote>
-<p><strong>JSON，全称是JavaScript Object Notation。它是基于JavaScript编程诧言ECMA-262 3rd EditionDecember 1999标准的一种轻量级的数据交换格式，主要用于跟服务器进行交换数据。跟XML相类似，它独立诧言，在跨平台数据传输上有很大的优势。</strong></p>
-</blockquote>
-<ol>
-<li><p><strong>JSON的书写格式：</strong></p>
-<ol>
-<li><p><strong>格式一：<code>{ “name”:“ xiaoming”, “age”:“22”, “email”:&quot;jone@163.com&quot; };</code></strong></p>
-<ol>
-<li><strong>格式二:</strong>                        </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">&quot;name&quot;:&quot;xiaoming&quot;,  </div><div class="line">&quot;age&quot;:&quot;22&quot;,  </div><div class="line">&quot;friends&quot;:[  </div><div class="line">	&#123;&quot;name&quot;:&#123;&quot;firstName&quot;:&quot;liu&quot;,&quot;lastName&quot;:&quot;wei&quot;&#125;,&quot;age&quot;:&quot;23&quot;&#125;,  </div><div class="line">	&#123;&quot;name&quot;:&#123;&quot;firstName&quot;:&quot;li&quot;,&quot;lastName&quot;:&quot;mei&quot;&#125;,&quot;age&quot;:&quot;27&quot;&#125;  </div><div class="line">]  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>取值</strong></p>
+<p>(2).作用域：</p>
+<p>作用域就是变量和函数的可访问范围，控制着变量和函数的可见性与生命周期，在JavaScript中变量的作用域有全局作用域和局部作用域。</p>
+<p>全局作用域：任何地方都可以定义拥有全局作用域的变量。</p>
+<p>a.没有用var声明的变量（除去函数的参数）都具有全局作用域，成为全局   变量，所以声明局部变量必须要用var。</p>
+<p>b.window的所有属性都具有全局作用域</p>
+<p>c.最外层函数体外声明的变量也具有全局作用域 </p>
+<p>局部作用域:局部变量的优先级高于全局变量。</p>
+<p>a.函数体内用var声明的变量具有局部作用域，成为局部变量</p>
+<p>b.函数的参数也具有局部作用域 </p>
 <ul>
-<li><strong>用“点”来取得相应的值，如<code>JSON.name</code></strong></li>
+<li>JavaScript是函数作用域（function scope），没有块级作用域。无论函数体内的变量在什么地方声明，对整个函数都是可见的，即JavaScript函数里声明的所有变量都被提前到函数体的顶部，只是提前变量声明，变量的赋值还是保留在原位置</li>
 </ul>
-</li>
-<li><p><strong>JSON和字符串之间转换</strong></p>
-<ol>
-<li><strong>JSON.stringify(json)</strong></li>
-<li><strong>JSON.parse(str)</strong></li>
-</ol>
-</li>
-<li><p><strong>JSON拷贝</strong></p>
-<blockquote>
-<p><strong>深拷贝,浅拷贝</strong></p>
-</blockquote>
-</li>
-</ol>
-</li>
-</ol>
-<h1 id="This-关键字"><a href="#This-关键字" class="headerlink" title="This 关键字"></a><strong>This 关键字</strong></h1><ol>
-<li><p><strong>this概念 :</strong></p>
-<ol>
-<li><p><strong>this是Javascript诧言的一个关键字它代表函数运行时，自劢生成的一个内部对象，只能在函数内部使用</strong></p>
-</li>
-<li><p><strong>三种情况下的this指向:</strong></p>
-<ol>
-<li><strong>纯粹的函数调用: this指向调用函数的对象</strong></li>
-<li><strong>作为对象方法的调用: this指向调用这个方法的对象</strong></li>
-<li><strong>作为构造函数调用: this指向构造函数的实例</strong></li>
-</ol>
-</li>
-<li><p><strong>修改this指向:</strong></p>
-<ol>
-<li><p><strong>使用call()方法</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. 语法：call(thisObj，Object)</div><div class="line">2. 定义：调用一个对象的一个方法，以另一个对象替换当前对象</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>使用apply()方法</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. 语法：apply(thisObj，[argArray])</div><div class="line">2.  定义：应用某一对象的一个方法，用另一个对象替换当前对象</div></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p><strong>使用new关键字</strong></p>
-</li>
-</ol>
-</li>
-</ol>
+<p>(3).作用域链：</p>
+<ul>
+<li>JavaScript的变量都是对象的属性，而该对象可能又是其它对象的属性，而所有的对象都是全局对象的属性，所以这些对象的关系可以看作是一条链，由于每个对象都有一个作用域，所以形成了一个作用域链。链头就是变量所处的对象，链尾就是全局对象。</li>
+</ul>
+<p>当代码在一个环境中执行时，会创建变量对象的一个作用域链来保证对执行环境有权访问的变量和函数的有序访问。</p>
+<p>2、原型链、继承</p>
+<p>（1）理解原型对象</p>
+<p>1).只要创建了一个新函数，就会为该函数创建一个prototype属性，这个属性指向函数的原型对象；</p>
+<p>2).所有原型对象都会自动获得一个constructor（构造函数）属性，这个属性包含一个指向prototype属性所在函数的指针；</p>
+<p>3).当调用构造函数创建一个新实例后，该实例的内部将包含一个指针（内部属性），指向构造函数的原型对象。</p>
+<p>（2）原型链</p>
+<ul>
+<li>综上所述，假如我们让原型对象等于另一个类型的实例，则此时的原型对象将包含一个指向另一个原型的实例，相应地，另一个原型中也包含着一个指向另一个构造函数的指针。假如另一个原型又是另一个类型的实例，那么上述关系依然成立，如此层层递进，就构成了实例与原型的链条，这就是原型链。</li>
+</ul>
+<p>【注】：所有引用类型默认都继承了Object，而这个继承也是通过原型链实现的。所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object.prototype。这也正是所有自定义类型都会继承toString()，valueOf()等默认方法的根本原因。</p>
+<p>（3）继承</p>
+<p>1).通过原型链实现。不能使用对象字面量创建原型方法，因为这样会重写原型链。</p>
+<p>缺点：最主要的问题是包含引用类型值的原型；二是在创建子类型的实例时，不能向超类型的构造函数中传递参数。</p>
+<p>2)借用构造函数。在子类型构造函数的内部调用超类型构造函数。使用apply()和call()方法，可以向超类型的构造函数中传递参数。apply()和call()的作用一样，只是专递的参数形式不同，apply()的参数是以数组的形式传递，call()中是展开的形式。</p>
+<p>缺点：函数复用无从谈起，而且在超类型的原型中定义的方法，对子类型而言是不可见的。</p>
+<p>3).组合继承（原型链+借用构造函数）。避免了1)、2）的缺陷，融合了他们的优点，成为javascript最常用的继承模式，而且，instanceof和isPrototypeOf()也能够用于识别基于组合继承创建的对象。</p>
+<p>3、闭包</p>
+<p>(1).概念：有权访问另一个函数作用域中的变量的函数。简单理解为“定义在一个函数内部的函数”。</p>
+<p>(2).好处：保护函数内的变量安全,加强了封装性；在内存中维持一个变量（缓存）；匿名自执行函数；模拟面向对象编程。</p>
+<p>(3).应用场景：使用闭包代替全局变量；函数外或在其他函数中访问某一函数内部的参数；包装相关功能；为节点循环绑定click事件，在事件函数中使用当次循环的值或节点，而不是最后一次循环的值或节点；</p>
+<p>(4).缺点：常驻内存，会增大内存使用量，使用不当很容易造成内存泄露，更重要的是，对闭包的使用不当会造成无效内存的产生。</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年11月09日 16:52</p>
-        <p>原始链接： <a class="post-url" href="/2017/04/28/JS字符串操作/" title="javascript 字符串操作">http://yoursite.com/2017/04/28/JS字符串操作/</a></p>
+        <p>最后更新： 2017年11月13日 11:52</p>
+        <p>原始链接： <a class="post-url" href="/2017/05/18/原型 闭包/" title="javascript 作用域 原型链">http://yoursite.com/2017/05/18/原型 闭包/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/img/logozw.jpg" alt="周斌">
@@ -277,7 +232,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/28/JS字符串操作/&title=《javascript 字符串操作》 — coco阿斌&pic=https://zhoubin0.github.io/img/12.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/18/原型 闭包/&title=《javascript 作用域 原型链》 — coco阿斌&pic=https://zhoubin0.github.io/img/4.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -287,22 +242,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/28/JS字符串操作/&title=《javascript 字符串操作》 — coco阿斌&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/18/原型 闭包/&title=《javascript 作用域 原型链》 — coco阿斌&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/28/JS字符串操作/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/05/18/原型 闭包/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javascript 字符串操作》 — coco阿斌&url=http://yoursite.com/2017/04/28/JS字符串操作/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javascript 作用域 原型链》 — coco阿斌&url=http://yoursite.com/2017/05/18/原型 闭包/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/28/JS字符串操作/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/05/18/原型 闭包/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -312,7 +267,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/28/JS字符串操作/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/05/18/原型 闭包/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -341,26 +296,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JS字符串操作"><span class="post-toc-text">JS字符串操作</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSON"><span class="post-toc-text">JSON</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#This-关键字"><span class="post-toc-text">This 关键字</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#作用域、原型链、闭包等概念理解"><span class="post-toc-text">作用域、原型链、闭包等概念理解</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2017/04/29/小小 励志故事/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          小小 励志故事
-        
-      </span>
-    </a>
   
-  
-    <a href="/2017/04/25/JQuery 基础二/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">JQuery 基础</span>
+    <a href="/2017/05/13/angular/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">scratch angular框架</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -369,7 +314,7 @@
 
 
     
-        <div id="SOHUCS" sid="JS字符串操作" ></div>
+        <div id="SOHUCS" sid="原型 闭包" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cythQ8OuD';

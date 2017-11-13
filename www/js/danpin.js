@@ -258,12 +258,15 @@ var $kucun_li=$(".kucun_list>.kucun_li");
 
         var $data=listData["listData0"+$i].data;
 
-        for(var i=0;i<4;i++){ var="" li="document.createElement("li");" li.innerhtml="<div class="content">" +="" '<img="" src="'+$data.list[i].coverImg+'" alt="">' +
+        for(var i=0;i<4;i++){
+            var li=document.createElement("li");
+            li.innerHTML= '<div class="content">' +
+                '<img src="'+$data.list[i].coverImg+'" alt="">' +
                 '<p class="bianhao">'+$data.list[i].describe+'</p>' +
                 '<p class="goumaiyanse">'+$data.list[i].title+'</p>' +
                 '<span>'+$data.list[i].creatAt+'</span>' +
                 '<p class="pingjia">'+$data.list[i].creatByFullName+'</p>' +
-                '';
+                '</div>';
 
             $itemHtml.append(li);
         }
@@ -328,4 +331,3 @@ $(function () {
 });
 
 
-</4;i++){>
