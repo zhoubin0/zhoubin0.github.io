@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>scratch mvc框架 | coco阿斌</title>
+  <title>javascript 原型 闭包 | coco阿斌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="ZhouBin,ZhouBin's Blog" />
   
-  <meta name="description" content="angular简介 angular 是 一个 JavaScript MVC型框架 M: model 数据 V: view  视图 C: controller 控制器   angular 通过新的属性和表达式（指令） 扩展了HTML angular 可以用来单一页面的应用程序 angular 的核心 : 双向数据绑定  使用方法 通过script 标签把 angular.js 文件引入 用cdn 网">
+  <meta name="description" content="作用域、原型链、闭包等概念理解1、执行环境及作用域  (1).执行环境：  定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。  全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，">
 <meta name="keywords" content="JavaScript,前端基础,动态网页编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="scratch mvc框架">
-<meta property="og:url" content="http://yoursite.com/2017/10/13/scratch_1/index.html">
+<meta property="og:title" content="javascript 原型 闭包">
+<meta property="og:url" content="http://yoursite.com/2017/05/08/原型 闭包/index.html">
 <meta property="og:site_name" content="coco阿斌">
-<meta property="og:description" content="angular简介 angular 是 一个 JavaScript MVC型框架 M: model 数据 V: view  视图 C: controller 控制器   angular 通过新的属性和表达式（指令） 扩展了HTML angular 可以用来单一页面的应用程序 angular 的核心 : 双向数据绑定  使用方法 通过script 标签把 angular.js 文件引入 用cdn 网">
-<meta property="og:updated_time" content="2017-10-26T11:01:44.752Z">
+<meta property="og:description" content="作用域、原型链、闭包等概念理解1、执行环境及作用域  (1).执行环境：  定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。  全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，">
+<meta property="og:updated_time" content="2017-11-13T03:38:58.444Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="scratch mvc框架">
-<meta name="twitter:description" content="angular简介 angular 是 一个 JavaScript MVC型框架 M: model 数据 V: view  视图 C: controller 控制器   angular 通过新的属性和表达式（指令） 扩展了HTML angular 可以用来单一页面的应用程序 angular 的核心 : 双向数据绑定  使用方法 通过script 标签把 angular.js 文件引入 用cdn 网">
+<meta name="twitter:title" content="javascript 原型 闭包">
+<meta name="twitter:description" content="作用域、原型链、闭包等概念理解1、执行环境及作用域  (1).执行环境：  定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。  全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -122,14 +122,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-scratch_1" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-原型 闭包" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      scratch mvc框架
+      javascript 原型 闭包
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -144,7 +144,7 @@
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2017-10-13
+          <i class="fa fa-calendar"></i>  2017-05-08
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -160,75 +160,57 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h2 id="angular"><a href="#angular" class="headerlink" title="angular"></a><strong>angular</strong></h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h3><ul>
-<li><strong>angular 是 一个 JavaScript MVC型框架</strong><ul>
-<li><strong>M: model 数据</strong></li>
-<li><strong>V: view  视图</strong></li>
-<li><strong>C: controller 控制器</strong></li>
-</ul>
-</li>
-<li><strong>angular 通过新的属性和表达式（指令） 扩展了HTML</strong></li>
-<li><strong>angular 可以用来单一页面的应用程序</strong></li>
-<li><strong>angular 的核心 : 双向数据绑定</strong></li>
-</ul>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a><strong>使用方法</strong></h3><ul>
-<li><strong>通过script 标签把 angular.js 文件引入</strong></li>
-<li><strong>用cdn 网上js文件</strong><br>  <code>&lt;script src=&quot;http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js&quot;&gt;&lt;/script&gt;</code></li>
-</ul>
-<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a><strong>指令</strong></h3><ul>
-<li><p><strong>ng-app: 初始化一个应用程序</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app=angular.module(<span class="string">"myapp"</span>,[])</div><div class="line"><span class="comment">// 创建一个angular 项目</span></div><div class="line"><span class="comment">// 第一个参数是 : 项目名称</span></div><div class="line"><span class="comment">// 第二个参数是:  数组,代表依赖注入</span></div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>ng-model : 绑定数据到带有输入域的元素</strong></p>
-</li>
-<li><strong>ng-bind : 绑定除带有输入域的元素</strong></li>
-<li><strong>ng-init: 初始化一个数据</strong></li>
-<li><p><strong>ng-repeat: 循环数组,创建元素</strong></p>
+            <h1 id="作用域、原型链、闭包等概念理解"><a href="#作用域、原型链、闭包等概念理解" class="headerlink" title="作用域、原型链、闭包等概念理解"></a><a href="http://www.cnblogs.com/n-q-y/p/4491005.html" target="_blank" rel="external">作用域、原型链、闭包等概念理解</a></h1><p>1、执行环境及作用域 </p>
+<p>(1).执行环境：</p>
 <ul>
-<li><strong>数组: <code>x in model</code> x代表 数组中的每一项数据;</strong></li>
-<li><strong>对象(object) <code>x in model</code> x代表对象中的每一项的值</strong><blockquote>
-<p><strong>ng-repeat 指令对于集合中（数组中）的每个项会 克隆一次 HTML 元素。</strong></p>
-</blockquote>
+<li><p>定义了变量或函数有权访问的其它数据，决定了它们的各自行为。每个执行环境都有一个与之关联的变量对象（variable object, VO），执行环境中定义的所有变量和函数都会保存在这个对象中，解析器在处理数据的时候就会访问这个内部对象。</p>
+</li>
+<li><p>全局执行环境是最外层的一个执行环境，在web浏览器中全局执行环境是window对象，因此所有全局变量和函数都是作为window对象的属性和方法创建的。每个函数都有自己的执行环境，当执行流进入一个函数的时候，函数的环境会被推入一个函数栈中，而在函数执行完毕后执行环境出栈并被销毁，保存在其中的所有变量和函数定义随之销毁，控制权返回到之前的执行环境中，全局的执行环境在应用程序退出（浏览器关闭）才会被销毁。</p>
 </li>
 </ul>
-</li>
-<li><p><strong>ng-controller:绑定一个控制器 (一个页面可以有多个控制器)</strong></p>
-</li>
-</ul>
-<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a><strong>自定义指令</strong></h3><ul>
-<li><p><strong>创建 :</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">   *</div><div class="line">   * // app.directive()用来创建指令 ,可以创建四种类型的指令: ECMA: E:元素,C:类名,M: 注释,A: 属性,默认创建的是EA</div><div class="line">   * // 有两个参数 :</div><div class="line">   *               第一个参数: 指令名称(驼峰命名法);</div><div class="line">   *               第二个参数: 是一个函数,并且这个函数要返回一个对象</div><div class="line">   *                           对象:</div><div class="line">                                   template: 模板</div><div class="line">                                   restrict: 类型</div><div class="line">                                   replace: 替换 ps:如果要用在M上面,必须加这个属性,值是true;</div><div class="line">   * */</div><div class="line">   app.directive(&quot;firstName&quot;,function () &#123;</div><div class="line">       return &#123;</div><div class="line">           template:&quot;&lt;h1&gt;三&lt;/h1&gt;&quot;,</div><div class="line">           restrict : &quot;E&quot;,     //</div><div class="line">       &#125;;</div><div class="line">   &#125;)</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>使用:</strong></p>
+<p>(2).作用域：</p>
+<p>作用域就是变量和函数的可访问范围，控制着变量和函数的可见性与生命周期，在JavaScript中变量的作用域有全局作用域和局部作用域。</p>
+<p>全局作用域：任何地方都可以定义拥有全局作用域的变量。</p>
+<p>a.没有用var声明的变量（除去函数的参数）都具有全局作用域，成为全局   变量，所以声明局部变量必须要用var。</p>
+<p>b.window的所有属性都具有全局作用域</p>
+<p>c.最外层函数体外声明的变量也具有全局作用域 </p>
+<p>局部作用域:局部变量的优先级高于全局变量。</p>
+<p>a.函数体内用var声明的变量具有局部作用域，成为局部变量</p>
+<p>b.函数的参数也具有局部作用域 </p>
 <ul>
-<li><strong>指令名称: 要把驼峰命名全部写成小写,大写改小写加-</strong></li>
-<li><strong>E: 元素</strong><blockquote>
-<p><strong><runoob-directive></runoob-directive></strong></p>
-</blockquote>
-</li>
-<li><strong>C: 类名</strong><blockquote>
-<p><strong><div class="runoob-directive"></div></strong></p>
-</blockquote>
-</li>
-<li><strong>A: 属性:</strong><blockquote>
-<p><strong><div runoob-directive=""></div></strong></p>
-</blockquote>
-</li>
-<li><strong>M:注释:</strong><blockquote>
-<p><strong><!-- directive: runoob-directive --></strong></p>
+<li>JavaScript是函数作用域（function scope），没有块级作用域。无论函数体内的变量在什么地方声明，对整个函数都是可见的，即JavaScript函数里声明的所有变量都被提前到函数体的顶部，只是提前变量声明，变量的赋值还是保留在原位置</li>
+</ul>
+<p>(3).作用域链：</p>
 <ul>
-<li><strong>注释的内容前后要有空格,要以directive: 开始,空格+指令名称</strong></li>
+<li>JavaScript的变量都是对象的属性，而该对象可能又是其它对象的属性，而所有的对象都是全局对象的属性，所以这些对象的关系可以看作是一条链，由于每个对象都有一个作用域，所以形成了一个作用域链。链头就是变量所处的对象，链尾就是全局对象。</li>
 </ul>
-</blockquote>
-</li>
+<p>当代码在一个环境中执行时，会创建变量对象的一个作用域链来保证对执行环境有权访问的变量和函数的有序访问。</p>
+<p>2、原型链、继承</p>
+<p>（1）理解原型对象</p>
+<p>1).只要创建了一个新函数，就会为该函数创建一个prototype属性，这个属性指向函数的原型对象；</p>
+<p>2).所有原型对象都会自动获得一个constructor（构造函数）属性，这个属性包含一个指向prototype属性所在函数的指针；</p>
+<p>3).当调用构造函数创建一个新实例后，该实例的内部将包含一个指针（内部属性），指向构造函数的原型对象。</p>
+<p>（2）原型链</p>
+<ul>
+<li>综上所述，假如我们让原型对象等于另一个类型的实例，则此时的原型对象将包含一个指向另一个原型的实例，相应地，另一个原型中也包含着一个指向另一个构造函数的指针。假如另一个原型又是另一个类型的实例，那么上述关系依然成立，如此层层递进，就构成了实例与原型的链条，这就是原型链。</li>
 </ul>
-</li>
-</ul>
+<p>【注】：所有引用类型默认都继承了Object，而这个继承也是通过原型链实现的。所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object.prototype。这也正是所有自定义类型都会继承toString()，valueOf()等默认方法的根本原因。</p>
+<p>（3）继承</p>
+<p>1).通过原型链实现。不能使用对象字面量创建原型方法，因为这样会重写原型链。</p>
+<p>缺点：最主要的问题是包含引用类型值的原型；二是在创建子类型的实例时，不能向超类型的构造函数中传递参数。</p>
+<p>2)借用构造函数。在子类型构造函数的内部调用超类型构造函数。使用apply()和call()方法，可以向超类型的构造函数中传递参数。apply()和call()的作用一样，只是专递的参数形式不同，apply()的参数是以数组的形式传递，call()中是展开的形式。</p>
+<p>缺点：函数复用无从谈起，而且在超类型的原型中定义的方法，对子类型而言是不可见的。</p>
+<p>3).组合继承（原型链+借用构造函数）。避免了1)、2）的缺陷，融合了他们的优点，成为javascript最常用的继承模式，而且，instanceof和isPrototypeOf()也能够用于识别基于组合继承创建的对象。</p>
+<p>3、闭包</p>
+<p>(1).概念：有权访问另一个函数作用域中的变量的函数。简单理解为“定义在一个函数内部的函数”。</p>
+<p>(2).好处：保护函数内的变量安全,加强了封装性；在内存中维持一个变量（缓存）；匿名自执行函数；模拟面向对象编程。</p>
+<p>(3).应用场景：使用闭包代替全局变量；函数外或在其他函数中访问某一函数内部的参数；包装相关功能；为节点循环绑定click事件，在事件函数中使用当次循环的值或节点，而不是最后一次循环的值或节点；</p>
+<p>(4).缺点：常驻内存，会增大内存使用量，使用不当很容易造成内存泄露，更重要的是，对闭包的使用不当会造成无效内存的产生。</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年10月26日 19:01</p>
-        <p>原始链接： <a class="post-url" href="/2017/10/13/scratch_1/" title="scratch mvc框架">http://yoursite.com/2017/10/13/scratch_1/</a></p>
+        <p>最后更新： 2017年11月13日 11:38</p>
+        <p>原始链接： <a class="post-url" href="/2017/05/08/原型 闭包/" title="javascript 原型 闭包">http://yoursite.com/2017/05/08/原型 闭包/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/img/logozw.jpg" alt="周斌">
@@ -250,7 +232,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/10/13/scratch_1/&title=《scratch mvc框架》 — coco阿斌&pic=http://yoursite.comimg/logozw.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/08/原型 闭包/&title=《javascript 原型 闭包》 — coco阿斌&pic=https://zhoubin0.github.io/img/4.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -260,22 +242,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/10/13/scratch_1/&title=《scratch mvc框架》 — coco阿斌&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/08/原型 闭包/&title=《javascript 原型 闭包》 — coco阿斌&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/10/13/scratch_1/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/05/08/原型 闭包/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《scratch mvc框架》 — coco阿斌&url=http://yoursite.com/2017/10/13/scratch_1/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javascript 原型 闭包》 — coco阿斌&url=http://yoursite.com/2017/05/08/原型 闭包/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/10/13/scratch_1/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/05/08/原型 闭包/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -285,7 +267,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/10/13/scratch_1/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/05/08/原型 闭包/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -314,26 +296,26 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#angular"><span class="post-toc-text">angular</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简介"><span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用方法"><span class="post-toc-text">使用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#指令"><span class="post-toc-text">指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义指令"><span class="post-toc-text">自定义指令</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#作用域、原型链、闭包等概念理解"><span class="post-toc-text">作用域、原型链、闭包等概念理解</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2017/10/13/angular/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/10/13/scratch_1/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          scratch angular框架
+          scratch mvc框架
         
       </span>
     </a>
   
   
-    <a href="/2017/05/08/原型 闭包/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">javascript 原型 闭包</span>
+    <a href="/2017/05/01/window对象的事件/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">javascript 对象的事件</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -342,7 +324,7 @@
 
 
     
-        <div id="SOHUCS" sid="scratch_1" ></div>
+        <div id="SOHUCS" sid="原型 闭包" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cythQ8OuD';
