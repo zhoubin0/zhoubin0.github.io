@@ -28,10 +28,51 @@
 
 </head>
 
+
+
+
+  <div id="hexo-helper-live2d">
+      <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+  </div>
+    <style>
+      #live2dcanvas{
+      	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+        position: fixed;
+        width: 150px;
+        height: 300px;
+        opacity:1;
+        
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -20px;
+      }
+	  
+    </style>
+    <script src="/live2d/device.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+    if(device.mobile()){
+      document.getElementById("live2dcanvas").style.width = '75px';
+      document.getElementById("live2dcanvas").style.height = '150px';
+      document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+      document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/wanko.model.json", 0.5)<\/script>');
+    }else{
+      document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+      document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/wanko.model.json", 0.5)<\/script>');
+    }
+    })();
+    </script>
+
+
 <body>
 
-<iframe style="display: none" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518332252&auto=1&height=66"></iframe>
-
+<iframe   style="display: none" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=22712173&auto=1&height=66"></iframe>
   <div id="container">
       <header id="header">
 
@@ -376,14 +417,14 @@ var xhr= new XMLHttpRequest...
 
 
   
-    <article id="post-Math 对象" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-jQuery 中的遍历" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/10/Math 对象/"  >javascript Math 对象</a>
+      <a class="article-title" href="/2017/04/10/jQuery 中的遍历/"  >JQuery中的遍历</a>
     </h1>
   
 
@@ -402,23 +443,23 @@ var xhr= new XMLHttpRequest...
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2017/04/10/Math 对象/" >
+            <a href="/2017/04/10/jQuery 中的遍历/" >
                 
-                <img src="https://zhoubin0.github.io/img/13.jpg" alt="javascript Math 对象" title="javascript Math 对象">
+
+                <img src="https://zhoubin0.github.io/img/8.jpg" alt="JQuery中的遍历" title="JQuery中的遍历">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                Math 对象
-作用：
-
-Javascript中，Math 对象是用于执行数学任务的对象(取整、取余。)
+                jQuery 中的遍历
+jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。jQ遍历分为四种，1. 想上遍历 2. 向下遍历 3. 过滤 4. 水平遍历
 
 
-访问语法：MAth.属性名
+.eq 过滤遍历
 
-注释：Math 对象并不像 Date 和 String 那样是对象的类，因此没有构造函数 Math()，像 Math.sin() 这样的函数只是函数，不是某个对象的方法。您无需创建它，通过把 Math 作为对象使用就可以调用其所有属性...
+用法
+1$(&apos;li&apos;).eq(0).css(&apos;background&...
             </p>
         </div>
       
@@ -443,7 +484,93 @@ Javascript中，Math 对象是用于执行数学任务的对象(取整、取余�
 
         </ul>
         
-            <a href="/2017/04/10/Math 对象/#more" class="article-more-link" >more&gt;&gt;</a>
+            <a href="/2017/04/10/jQuery 中的遍历/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article id="post-javascript  运算" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/10/javascript  运算/"  >javascript  运算</a>
+    </h1>
+  
+
+          
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  
+                  <a href="/categories/学习/">学习</a>
+                  
+                  <a href="/categories/动态网页编程/">动态网页编程</a>
+                  
+              </span>
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2017/04/10/javascript  运算/" >
+                
+
+                <img src="https://zhoubin0.github.io/img/1.jpg" alt="javascript  运算" title="javascript  运算">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                JS赋值 运算比较 流程控制变量的声明与赋值
+先声明变量再赋值
+
+var width      width=5var － 用于声明变量的关键字width － 变量名
+
+
+同时声明和赋值变量
+
+var catName= “ 皮皮”; var x, y, z = 10; 
+
+
+不声明直接赋值
+
+width=5
+
+
+
+JS运算运算符号
+算数运算符(+,-,*,/,%,++,–)...
+            </p>
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2017-04-10</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/前端基础/" class="color5">前端基础</a>
+      
+    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2017/04/10/javascript  运算/#more" class="article-more-link" >more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -537,14 +664,14 @@ typeof操作符可以检测变量的数据类型（输出的是一个关于数�
 
 
   
-    <article id="post-jQuery 中的遍历" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Math 对象" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/10/jQuery 中的遍历/"  >JQuery中的遍历</a>
+      <a class="article-title" href="/2017/04/10/Math 对象/"  >javascript Math 对象</a>
     </h1>
   
 
@@ -563,23 +690,23 @@ typeof操作符可以检测变量的数据类型（输出的是一个关于数�
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2017/04/10/jQuery 中的遍历/" >
+            <a href="/2017/04/10/Math 对象/" >
                 
-
-                <img src="https://zhoubin0.github.io/img/8.jpg" alt="JQuery中的遍历" title="JQuery中的遍历">
+                <img src="https://zhoubin0.github.io/img/13.jpg" alt="javascript Math 对象" title="javascript Math 对象">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                jQuery 中的遍历
-jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。jQ遍历分为四种，1. 想上遍历 2. 向下遍历 3. 过滤 4. 水平遍历
+                Math 对象
+作用：
+
+Javascript中，Math 对象是用于执行数学任务的对象(取整、取余。)
 
 
-.eq 过滤遍历
+访问语法：MAth.属性名
 
-用法
-1$(&apos;li&apos;).eq(0).css(&apos;background&...
+注释：Math 对象并不像 Date 和 String 那样是对象的类，因此没有构造函数 Math()，像 Math.sin() 这样的函数只是函数，不是某个对象的方法。您无需创建它，通过把 Math 作为对象使用就可以调用其所有属性...
             </p>
         </div>
       
@@ -604,7 +731,7 @@ jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（
 
         </ul>
         
-            <a href="/2017/04/10/jQuery 中的遍历/#more" class="article-more-link" >more&gt;&gt;</a>
+            <a href="/2017/04/10/Math 对象/#more" class="article-more-link" >more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -686,14 +813,14 @@ outerHeight 返回窗口...
 
 
   
-    <article id="post-java script 数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-数组方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/10/java script 数据类型/"  >javascript 数据类型</a>
+      <a class="article-title" href="/2017/04/10/数组方法/"  >javascript 数组方法</a>
     </h1>
   
 
@@ -712,27 +839,35 @@ outerHeight 返回窗口...
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2017/04/10/java script 数据类型/" >
+            <a href="/2017/04/10/数组方法/" >
                 
-
-                <img src="https://zhoubin0.github.io/img/17.jpg" alt="javascript 数据类型" title="javascript 数据类型">
+                <img src="https://zhoubin0.github.io/img/13.jpg" alt="javascript 数组方法" title="javascript 数组方法">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                
-javascript 数据类型
+                &lt;!DOCTYPE html&gt;
 
 
-//数字类型*
-var num=3;
-console.log(typeof num);
-console.log(typeof(typeof num) );*
-console.log(num/“a”);
-console.log(typeof(num/“a”));*
-var str=”54sdwe5421ds”;
-console.log(...
+
+
+
+
+p{
+color: red;
+}
+
+
+
+数组的方法可以用来操作数组;
+
+join();
+// join  把数组中的元素转换成字符串,并且拼接起来;
+//把数组转换成字符串,并且默认用逗号分隔;
+//如果join中括号里面有东西,就用括号中的东西分隔;*
+// join 不会改变原来的数组,返回的是一个新的字符串
+p...
             </p>
         </div>
       
@@ -757,93 +892,7 @@ console.log(...
 
         </ul>
         
-            <a href="/2017/04/10/java script 数据类型/#more" class="article-more-link" >more&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article id="post-javascript  运算" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/10/javascript  运算/"  >javascript  运算</a>
-    </h1>
-  
-
-          
-              <span class="header-cate">
-                <i class="fa fa-map-marker"></i>
-                  
-                  <a href="/categories/学习/">学习</a>
-                  
-                  <a href="/categories/动态网页编程/">动态网页编程</a>
-                  
-              </span>
-          
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2017/04/10/javascript  运算/" >
-                
-
-                <img src="https://zhoubin0.github.io/img/1.jpg" alt="javascript  运算" title="javascript  运算">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                JS赋值 运算比较 流程控制变量的声明与赋值
-先声明变量再赋值
-
-var width      width=5var － 用于声明变量的关键字width － 变量名
-
-
-同时声明和赋值变量
-
-var catName= “ 皮皮”; var x, y, z = 10; 
-
-
-不声明直接赋值
-
-width=5
-
-
-
-JS运算运算符号
-算数运算符(+,-,*,/,%,++,–)...
-            </p>
-        </div>
-      
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2017-04-10</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
-      
-    <a href="/tags/前端基础/" class="color5">前端基础</a>
-      
-    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2017/04/10/javascript  运算/#more" class="article-more-link" >more&gt;&gt;</a>
+            <a href="/2017/04/10/数组方法/#more" class="article-more-link" >more&gt;&gt;</a>
         
     </footer>
   </div>

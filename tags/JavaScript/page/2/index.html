@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Mot-clé: JavaScript | coco阿斌</title>
+  <title>Tag: JavaScript | coco阿斌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Bin,Bin's Blog" />
@@ -28,10 +28,51 @@
 
 </head>
 
+
+
+
+  <div id="hexo-helper-live2d">
+      <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+  </div>
+    <style>
+      #live2dcanvas{
+      	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+        position: fixed;
+        width: 150px;
+        height: 300px;
+        opacity:1;
+        
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -20px;
+      }
+	  
+    </style>
+    <script src="/live2d/device.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+    if(device.mobile()){
+      document.getElementById("live2dcanvas").style.width = '75px';
+      document.getElementById("live2dcanvas").style.height = '150px';
+      document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+      document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/wanko.model.json", 0.5)<\/script>');
+    }else{
+      document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+      document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/wanko.model.json", 0.5)<\/script>');
+    }
+    })();
+    </script>
+
+
 <body>
 
-<iframe style="display: none" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518332252&auto=1&height=66"></iframe>
-
+<iframe   style="display: none" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=22712173&auto=1&height=66"></iframe>
   <div id="container">
       <header id="header">
 
@@ -212,42 +253,6 @@
     <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
     <header class="archive-article-header">
-      <a href="/2017/04/10/java script 数据类型/" class="archive-article-date">
-  <time datetime="2017-04-10T13:30:16.000Z" itemprop="datePublished">04-10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/10/java script 数据类型/"  >javascript 数据类型</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
-      
-    <a href="/tags/前端基础/" class="color5">前端基础</a>
-      
-    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
       <a href="/2017/04/10/Math 对象/" class="archive-article-date">
   <time datetime="2017-04-10T13:30:16.000Z" itemprop="datePublished">04-10</time>
 </a>
@@ -284,49 +289,13 @@
     <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
     <header class="archive-article-header">
-      <a href="/2017/04/10/jQuery 中的遍历/" class="archive-article-date">
+      <a href="/2017/04/10/java script 数据类型/" class="archive-article-date">
   <time datetime="2017-04-10T13:30:16.000Z" itemprop="datePublished">04-10</time>
 </a>
       
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/10/jQuery 中的遍历/"  >JQuery中的遍历</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
-      
-    <a href="/tags/前端基础/" class="color5">前端基础</a>
-      
-    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/10/BOM 对象/" class="archive-article-date">
-  <time datetime="2017-04-10T13:30:16.000Z" itemprop="datePublished">04-10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/10/BOM 对象/"  >javascript Bom 对象</a>
+      <a class="archive-article-title" href="/2017/04/10/java script 数据类型/"  >javascript 数据类型</a>
     </h1>
   
 
@@ -392,6 +361,78 @@
     <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
     <header class="archive-article-header">
+      <a href="/2017/04/10/07 01  javascript/" class="archive-article-date">
+  <time datetime="2017-04-10T13:30:16.000Z" itemprop="datePublished">04-10</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/04/10/07 01  javascript/"  >javascript基本对象,数据类型,常量,变量</a>
+    </h1>
+  
+
+    </header>
+      
+        <div class="archive-post-footer">
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/前端基础/" class="color5">前端基础</a>
+      
+    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
+      
+  </li>
+
+        </div>
+      
+  </div>
+</article>
+
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2017/04/10/BOM 对象/" class="archive-article-date">
+  <time datetime="2017-04-10T13:30:16.000Z" itemprop="datePublished">04-10</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/04/10/BOM 对象/"  >javascript Bom 对象</a>
+    </h1>
+  
+
+    </header>
+      
+        <div class="archive-post-footer">
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/前端基础/" class="color5">前端基础</a>
+      
+    <a href="/tags/动态网页编程/" class="color2">动态网页编程</a>
+      
+  </li>
+
+        </div>
+      
+  </div>
+</article>
+
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
       <a href="/2017/04/10/JS 对象 类,定时器/" class="archive-article-date">
   <time datetime="2017-04-10T13:30:16.000Z" itemprop="datePublished">04-10</time>
 </a>
@@ -428,13 +469,13 @@
     <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
     <header class="archive-article-header">
-      <a href="/2017/04/10/07 01  javascript/" class="archive-article-date">
+      <a href="/2017/04/10/jQuery 中的遍历/" class="archive-article-date">
   <time datetime="2017-04-10T13:30:16.000Z" itemprop="datePublished">04-10</time>
 </a>
       
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/10/07 01  javascript/"  >javascript基本对象,数据类型,常量,变量</a>
+      <a class="archive-article-title" href="/2017/04/10/jQuery 中的遍历/"  >JQuery中的遍历</a>
     </h1>
   
 

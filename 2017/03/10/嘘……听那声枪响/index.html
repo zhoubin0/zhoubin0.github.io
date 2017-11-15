@@ -9,7 +9,7 @@
     <meta name="keywords" content="Bin,Bin's Blog" />
   
   <meta name="description" content="嘘……听那声枪响 （971天的血、汗、 泪） 忍含着泪水坐落在田径场上，三年了，我为这个场地奋斗过、拼搏过。如今仍然在努力，虽然有些晚，不过没关系。别人不支持、不相信我，只要在乎我的人，相信、支持我就行了。看着那令人不禁酸痛的跑道，让我想起了一些往事。  2010年    12月9日     星期四           晴 今天，是我在学校内正式上的第一堂训练课，这一天的等待是那么的焦急。下午自习">
-<meta name="keywords" content="励志,奋斗,故事">
+<meta name="keywords" content="故事,励志,奋斗">
 <meta property="og:type" content="article">
 <meta property="og:title" content="嘘……听那声枪响">
 <meta property="og:url" content="http://yoursite.com/2017/03/10/嘘……听那声枪响/index.html">
@@ -33,10 +33,51 @@
 
 </head>
 
+
+
+
+  <div id="hexo-helper-live2d">
+      <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+  </div>
+    <style>
+      #live2dcanvas{
+      	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+        position: fixed;
+        width: 150px;
+        height: 300px;
+        opacity:1;
+        
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -20px;
+      }
+	  
+    </style>
+    <script src="/live2d/device.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+    if(device.mobile()){
+      document.getElementById("live2dcanvas").style.width = '75px';
+      document.getElementById("live2dcanvas").style.height = '150px';
+      document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+      document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/wanko.model.json", 0.5)<\/script>');
+    }else{
+      document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+      document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/wanko.model.json", 0.5)<\/script>');
+    }
+    })();
+    </script>
+
+
 <body>
 
-<iframe style="display: none" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518332252&auto=1&height=66"></iframe>
-
+<iframe   style="display: none" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=22712173&auto=1&height=66"></iframe>
   <div id="container">
       <header id="header">
 
@@ -255,11 +296,11 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
+    <a href="/tags/故事/" class="color3">故事</a>
+      
     <a href="/tags/励志/" class="color3">励志</a>
       
     <a href="/tags/奋斗/" class="color3">奋斗</a>
-      
-    <a href="/tags/故事/" class="color3">故事</a>
       
   </li>
 

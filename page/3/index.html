@@ -28,10 +28,51 @@
 
 </head>
 
+
+
+
+  <div id="hexo-helper-live2d">
+      <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+  </div>
+    <style>
+      #live2dcanvas{
+      	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+        position: fixed;
+        width: 150px;
+        height: 300px;
+        opacity:1;
+        
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -20px;
+      }
+	  
+    </style>
+    <script src="/live2d/device.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+    if(device.mobile()){
+      document.getElementById("live2dcanvas").style.width = '75px';
+      document.getElementById("live2dcanvas").style.height = '150px';
+      document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+      document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/wanko.model.json", 0.5)<\/script>');
+    }else{
+      document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+      document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/wanko.model.json", 0.5)<\/script>');
+    }
+    })();
+    </script>
+
+
 <body>
 
-<iframe style="display: none" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518332252&auto=1&height=66"></iframe>
-
+<iframe   style="display: none" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=22712173&auto=1&height=66"></iframe>
   <div id="container">
       <header id="header">
 
@@ -126,14 +167,14 @@
       <div class="outer">
         <section id="main" class="body-wrap">
   
-    <article id="post-数组方法" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-java script 数据类型" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/10/数组方法/"  >javascript 数组方法</a>
+      <a class="article-title" href="/2017/04/10/java script 数据类型/"  >javascript 数据类型</a>
     </h1>
   
 
@@ -152,35 +193,27 @@
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2017/04/10/数组方法/" >
+            <a href="/2017/04/10/java script 数据类型/" >
                 
-                <img src="https://zhoubin0.github.io/img/13.jpg" alt="javascript 数组方法" title="javascript 数组方法">
+
+                <img src="https://zhoubin0.github.io/img/17.jpg" alt="javascript 数据类型" title="javascript 数据类型">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                &lt;!DOCTYPE html&gt;
+                
+javascript 数据类型
 
 
-
-
-
-
-p{
-color: red;
-}
-
-
-
-数组的方法可以用来操作数组;
-
-join();
-// join  把数组中的元素转换成字符串,并且拼接起来;
-//把数组转换成字符串,并且默认用逗号分隔;
-//如果join中括号里面有东西,就用括号中的东西分隔;*
-// join 不会改变原来的数组,返回的是一个新的字符串
-p...
+//数字类型*
+var num=3;
+console.log(typeof num);
+console.log(typeof(typeof num) );*
+console.log(num/“a”);
+console.log(typeof(num/“a”));*
+var str=”54sdwe5421ds”;
+console.log(...
             </p>
         </div>
       
@@ -205,7 +238,7 @@ p...
 
         </ul>
         
-            <a href="/2017/04/10/数组方法/#more" class="article-more-link" >more&gt;&gt;</a>
+            <a href="/2017/04/10/java script 数据类型/#more" class="article-more-link" >more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -365,11 +398,11 @@ ECMAScript...
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/故事/" class="color3">故事</a>
-      
     <a href="/tags/个性/" class="color3">个性</a>
       
     <a href="/tags/签名/" class="color3">签名</a>
+      
+    <a href="/tags/故事/" class="color3">故事</a>
       
   </li>
 
@@ -437,11 +470,11 @@ ECMAScript...
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
+    <a href="/tags/故事/" class="color3">故事</a>
+      
     <a href="/tags/励志/" class="color3">励志</a>
       
     <a href="/tags/奋斗/" class="color3">奋斗</a>
-      
-    <a href="/tags/故事/" class="color3">故事</a>
       
   </li>
 
