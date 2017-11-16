@@ -83,40 +83,8 @@ $(function () {
 
 
         function aa(a) {
-            if(a<10){
-                a="0"+a
-            }
-            return a
-        }
-
-        d.innerHTML=aa(dd);
-        h.innerHTML=aa(hh);
-        m.innerHTML=aa(mm);
-        s.innerHTML=aa(ss);
-
-    }
-    setInterval(gett,1)
-
-
-//  倒计时  结束
-});
-
-
-
-
-//   数据 开始  中奖信息  开始
-
-
-!(function () {
-    var $itemHtml=$("#itemHtml");
-    var $i=0;
-    function add() {
-        var $data=listData["listData0"+$i].data;
-        for(var i=0;i<4;i++){
-            var li=document.createElement("li");
-            li.innerHTML= '<div class="zhongjiang_img">' +
-                '<img src="'+$data.list[i].coverImg+'" alt="">' +
-                '</div>' +
+            if(a<10){ a="0" +a="" }="" return="" d.innerhtml="aa(dd);" h.innerhtml="aa(hh);" m.innerhtml="aa(mm);" s.innerhtml="aa(ss);" setinterval(gett,1)="" 倒计时="" 结束="" });="" 数据="" 开始="" 中奖信息="" !(function="" ()="" {="" var="" $itemhtml="$("#itemHtml");" $i="0;" function="" add()="" $data="listData["listData0"+$i].data;" for(var="" i="0;i<4;i++){" li="document.createElement("li");" li.innerhtml="<div class="zhongjiang_img">" +="" '<img="" src="'+$data.list[i].coverImg+'" alt="">' +
+                '' +
                 '<span class="uni-id">'+$data.list[i].describe+'</span>' +
                 '<span class="uni-name">'+$data.list[i].title+'</span>';
             $itemHtml.append(li);
@@ -147,3 +115,4 @@ $(function () {
 
 //   数据 开始  中奖信息  结束
 
+</10){>
